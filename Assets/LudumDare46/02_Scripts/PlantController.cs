@@ -14,9 +14,11 @@ public enum StatType
 
 public class PlantController : MonoBehaviour
 {
+    public Animator animator;
     [Range(0, 100)] public float[] stats;
     public float eatRadius;
     public PlantRotate rotateScript;
+    public float angleOfAttack = 5f;
 
     // Start is called before the first frame update
     void Start()
@@ -33,10 +35,21 @@ public class PlantController : MonoBehaviour
         if (newTarget)
         {
             rotateScript.SetTarget(newTarget.transform);
+
+            // If target is within the angle of attack, then attack
+            if (targetWithinAttackAngle(newTarget))
+            {
+                animator.SetBool("attack", true);
+            }
+            else
+            {
+                animator.SetBool("attack", false);
+            }
         }
         else
         {
             rotateScript.SetTarget(null);
+            animator.SetBool("attack", false);
         }
     }
 
@@ -75,15 +88,12 @@ public class PlantController : MonoBehaviour
                 attackableObjectsInRange.Add(attackableObject);
             }
         }
-
-        Debug.Log("atck obj count = " + attackableObjects.Length + "; in range = "
-            + attackableObjectsInRange.Count);
+        
         if (attackableObjectsInRange.Count <= 0) return null;
 
         // Based on which stat is the lowest stat for the plant, 
         // target the one that gives the most in that stat
         StatType lowestStatType = GetLowestStat();
-        Debug.Log(lowestStatType);
         AttackableObject mostValueableObject = attackableObjectsInRange[0];
 
         for (int i = 1; i < attackableObjectsInRange.Count; i++)
@@ -96,5 +106,20 @@ public class PlantController : MonoBehaviour
         }
 
         return mostValueableObject;
+    }
+
+    private bool targetWithinAttackAngle(AttackableObject target)
+    {
+        Vector3 lookDirection = transform.forward;
+        lookDirection.y = 0;
+
+        // Determine which direction to rotate towards
+        Vector3 targetDirection = target.transform.position - transform.position;
+        targetDirection.y = 0;
+
+        float angleToTarget = Vector3.Angle(lookDirection, targetDirection);
+        Debug.Log(angleToTarget);
+
+        return angleToTarget < angleOfAttack;
     }
 }
