@@ -5,13 +5,6 @@ using System;
 
 public class AttackableObject : MonoBehaviour
 {
-    [Serializable]
-    public class StatTypeClass
-    {
-        public StatType statName;
-        [Range(0, 100)] public float value;
-    }
-
     public Dictionary<StatType, float> statFillValues = new Dictionary<StatType, float>();
 
     public List<StatTypeClass> statFillValuesList = new List<StatTypeClass>();

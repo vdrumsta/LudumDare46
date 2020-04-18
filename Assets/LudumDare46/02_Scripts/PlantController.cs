@@ -12,18 +12,48 @@ public enum StatType
     Water
 }
 
+[Serializable]
+public class StatTypeClass
+{
+    public StatType statName;
+    [Range(0, 100)] public float value;
+}
+
 public class PlantController : MonoBehaviour
 {
     public Animator animator;
-    [Range(0, 100)] public float[] stats;
+
+    // This is only used for initial values. 
+    // Change stats dictionary if you wanna change the stat
+    public List<StatTypeClass> statsList = new List<StatTypeClass>();
+    public Dictionary<StatType, float> stats = new Dictionary<StatType, float>();
     public float eatRadius;
     public PlantRotate rotateScript;
     public float angleOfAttack = 5f;
 
+    private bool isAttacking;
+    public bool IsAttacking
+    {
+        get
+        {
+            return isAttacking;
+        }
+
+        private set
+        {
+            isAttacking = value;
+            animator.SetBool("attack", value);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        stats = new float[StatType.GetNames(typeof(StatType)).Length];
+        // Populate stats dictionary
+        foreach (var stat in statsList)
+        {
+            stats.Add(stat.statName, stat.value);
+        }
     }
 
     // Update is called once per frame
@@ -31,7 +61,7 @@ public class PlantController : MonoBehaviour
     {
         var newTarget = PickNewTarget();
 
-        
+
         if (newTarget)
         {
             rotateScript.SetTarget(newTarget.transform);
@@ -39,38 +69,51 @@ public class PlantController : MonoBehaviour
             // If target is within the angle of attack, then attack
             if (targetWithinAttackAngle(newTarget))
             {
-                animator.SetBool("attack", true);
+                IsAttacking = true;
             }
             else
             {
-                animator.SetBool("attack", false);
+                IsAttacking = false;
             }
         }
         else
         {
             rotateScript.SetTarget(null);
-            animator.SetBool("attack", false);
+            IsAttacking = false;
+        }
+
+        // For debugging to see the stat values in editor
+        UpdateStatsList();
+    }
+
+    private void UpdateStatsList()
+    {
+        foreach(var stat in statsList)
+        {
+            stat.value = stats[stat.statName];
         }
     }
 
     public StatType GetLowestStat()
     {
-        int minStatIndex = 0;
+        StatType minStatKey = StatType.Happiness;
+        float minStatValue = float.MaxValue;
 
-        for (int i = 1; i < stats.Length; i++)
+        foreach(var stat in stats)
         {
-            if (stats[i] < stats[minStatIndex])
+            if (stat.Value < minStatValue)
             {
-                minStatIndex = i;
+                minStatKey = stat.Key;
+                minStatValue = stat.Value;
             }
         }
 
-        return (StatType) minStatIndex;
+        return (StatType) minStatKey;
     }
 
     public float GetStat(StatType statType)
     {
-        return stats[(int)statType];
+        return stats[statType];
     }
 
     private AttackableObject PickNewTarget()
@@ -118,7 +161,6 @@ public class PlantController : MonoBehaviour
         targetDirection.y = 0;
 
         float angleToTarget = Vector3.Angle(lookDirection, targetDirection);
-        Debug.Log(angleToTarget);
 
         return angleToTarget < angleOfAttack;
     }
