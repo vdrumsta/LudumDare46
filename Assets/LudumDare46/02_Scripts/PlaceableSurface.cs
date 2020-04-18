@@ -5,16 +5,31 @@ using UnityEngine;
 public class PlaceableSurface : MonoBehaviour
 {
     public Transform positionOfItem;
+    public PickableItem itemOnSurface;
 
-    // Start is called before the first frame update
-    void Start()
+    public UsableItem.UseType typeSurfaceAdds;
+
+    private void Update()
     {
-        
+        if(itemOnSurface is UsableItem)
+        {
+            UsableItem item = itemOnSurface as UsableItem;
+            if (!item.isFull)
+            {
+                item.AddFromSurface(typeSurfaceAdds);
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlaceItemOnMe(PickableItem item)
     {
-        
+        itemOnSurface = item;
+    }
+
+    public PickableItem TakeItemFromMe()
+    {
+        PickableItem tempItem = itemOnSurface;
+        itemOnSurface = null;
+        return tempItem;
     }
 }

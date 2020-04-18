@@ -25,16 +25,42 @@ public class PlayerArms : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            if (itemAvailable)
+            if (itemAvailable && !itemAvailable.itemInUse)// pick up item
             {
-                ItemInHand = itemAvailable;
+                itemInHand = itemAvailable;
                 itemAvailable = null;
                 itemInHand.PlaceItemAtLocation(transform);
             }
-            else if (itemInHand)
+            else if (surfaceAvailable)
             {
-                itemInHand.DropItem(surfaceAvailable);
+                if (itemInHand && !surfaceAvailable.itemOnSurface)// place item on surface
+                {
+                    surfaceAvailable.PlaceItemOnMe(ItemInHand);
+                    itemInHand.DropItem(surfaceAvailable);
+                    ItemInHand = null;
+                }
+                else if (surfaceAvailable.itemOnSurface && !itemInHand)// take item from surface
+                {
+                    ItemInHand = surfaceAvailable.TakeItemFromMe();
+                    itemAvailable = null;
+                    itemInHand.PlaceItemAtLocation(transform);
+                }
+            }
+            else if (itemInHand)// drop item
+            {
+                itemInHand.DropItem(null);
                 ItemInHand = null;
+            }
+        }
+        else if (Input.GetButtonDown("Fire2"))
+        {
+            if(itemInHand && itemInHand is UsableItem)
+            {
+                UsableItem item = itemInHand as UsableItem;
+                if (item.isFull)
+                {
+                    item.UseItem();
+                }
             }
         }
     }
@@ -51,7 +77,6 @@ public class PlayerArms : MonoBehaviour
 
         if (surface)
         {
-            Debug.Log("Placeable surface detected");
             surfaceAvailable = surface;
         }
     }

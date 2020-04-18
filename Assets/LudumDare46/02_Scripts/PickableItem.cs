@@ -4,21 +4,22 @@ using UnityEngine;
 
 public class PickableItem : MonoBehaviour
 {
-    public bool stayStill;
+    [System.NonSerialized]
+    public bool itemInUse;
 
     private Rigidbody itemRigidbody;
     private GameObject objectPlacedOn;
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         itemRigidbody = this.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
-    void Update()
+    protected void Update()
     {
-        if (stayStill)
+        if (itemInUse)
         {
             itemRigidbody.constraints = RigidbodyConstraints.FreezeAll;
         }
@@ -30,8 +31,8 @@ public class PickableItem : MonoBehaviour
 
     public void PlaceItemAtLocation(Transform placedOnObject)
     {
-        //shoudl stay static and attack to a parent object
-        stayStill = true;
+        //should stay static and attack to a parent object
+        itemInUse = true;
         transform.parent = placedOnObject;
         transform.position = placedOnObject.position;
         transform.rotation = placedOnObject.rotation;
@@ -48,7 +49,7 @@ public class PickableItem : MonoBehaviour
         else
         {
             transform.parent = null;
-            stayStill = false;
+            itemInUse = false;
         }
     }
 }
