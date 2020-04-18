@@ -6,6 +6,10 @@ public class PlaceableSurface : MonoBehaviour
 {
     public Transform positionOfItem;
     public PickableItem itemOnSurface;
+    private Coroutine hasItemOnCoroutine;
+
+    [SerializeField]
+    private float fillSpeed;
 
     public UsableItem.UseType typeSurfaceAdds;
 
@@ -14,10 +18,29 @@ public class PlaceableSurface : MonoBehaviour
         if(itemOnSurface is UsableItem)
         {
             UsableItem item = itemOnSurface as UsableItem;
-            if (!item.isFull)
+            if (item.percentageFull != 100 && hasItemOnCoroutine == null)
             {
-                item.AddFromSurface(typeSurfaceAdds);
+                hasItemOnCoroutine = StartCoroutine(HasItemOnRoutine(item));
             }
+            else if(item.percentageFull == 100)
+            {
+                StopCoroutine(hasItemOnCoroutine);
+                hasItemOnCoroutine = null;
+            }
+        }
+        else if(hasItemOnCoroutine != null)
+        {
+            StopCoroutine(hasItemOnCoroutine);
+            hasItemOnCoroutine = null;
+        }
+    }
+
+    private IEnumerator HasItemOnRoutine(UsableItem item)
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(fillSpeed);
+            item.AddFromSurface(typeSurfaceAdds, 1);
         }
     }
 

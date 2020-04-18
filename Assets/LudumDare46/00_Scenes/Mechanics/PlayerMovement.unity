@@ -229,6 +229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   positionOfItem: {fileID: 2049623842}
   itemOnSurface: {fileID: 0}
+  fillSpeed: 0.1
   typeSurfaceAdds: 1
 --- !u!1 &70593448
 GameObject:
@@ -662,7 +663,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canGetFromSurface: 1
   canBeUsedFor: 0
-  isFull: 0
+  percentageFull: 0
   visualElement: {fileID: 2030786841}
 --- !u!54 &561951174
 Rigidbody:
@@ -1665,6 +1666,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1395886724, guid: 351ce48191a962c4ca93644d27beb07b, type: 3}
+      propertyPath: useSpeed
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 9182177877245493586, guid: 351ce48191a962c4ca93644d27beb07b,
         type: 3}
       propertyPath: m_Name

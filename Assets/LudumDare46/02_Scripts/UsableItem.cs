@@ -13,31 +13,32 @@ public class UsableItem : PickableItem
 
     public UseType canGetFromSurface;
     public UseType canBeUsedFor;
-    public bool isFull;
+    public float percentageFull;
     public GameObject visualElement;
 
     protected override void Start()
     {
         base.Start();
-        visualElement.SetActive(isFull);
+        visualElement.SetActive(percentageFull > 0);
     }
 
-    public void UseItem()
+    public void UseItem(int amountToAdd)
     {
-        if (isFull)
+        Debug.Log("USSSSEEEE");
+        if (percentageFull > 0)
         {
-            isFull = false;
-            visualElement.SetActive(isFull);
+            visualElement.SetActive(percentageFull > 0);
+            percentageFull -= amountToAdd;
             Debug.Log("used item");
         }
     }
 
-    public void AddFromSurface(UseType typeToAdd)
+    public void AddFromSurface(UseType typeToAdd, int amountToAdd)
     {
-        if (!isFull && typeToAdd == canGetFromSurface)
+        if (percentageFull <100 && typeToAdd == canGetFromSurface)
         { 
-            isFull = true;
-            visualElement.SetActive(isFull);
+            visualElement.SetActive(percentageFull > 0);
+            percentageFull += amountToAdd;
         }
     }
 }
