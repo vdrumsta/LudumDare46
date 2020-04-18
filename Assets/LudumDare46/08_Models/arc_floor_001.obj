@@ -1,0 +1,58 @@
+#File written by LIBUNFOLD3D. Compilation :Apr 13 2018,19:30:35
+mtllib 
+#begin vertices
+v -50 10 50
+v 50 10 50
+v 50 10 -50
+v -50 10 -50
+v -50 0 50
+v 50 0 50
+v 50 0 -50
+v -50 0 -50
+#end vertices
+
+#begin 12 textures vertices 
+vt 0.08496094 0.9150391 0
+vt 0.08496094 0.08496094 0
+vt 0.9150391 0.08496094 0
+vt 0.9150391 0.9150391 0
+vt 0.001953125 0.9150391 0
+vt 0.08496094 0.001953125 0
+vt 0.9980469 0.08496094 0
+vt 0.9150391 0.9980469 0
+vt 0.9980469 0.9150391 0
+vt 0.9150391 0.001953125 0
+vt 0.001953125 0.08496094 0
+vt 0.08496094 0.9980469 0
+#end 12 textures vertices 
+
+#begin 8 normals 
+vn -0.5773503 0.5773503 0.5773503
+vn 0.5773503 0.5773503 0.5773503
+vn 0.5773503 0.5773503 -0.5773503
+vn -0.5773503 0.5773503 -0.5773503
+vn -0.7071068 0 0.7071068
+vn 0.7071068 0 0.7071068
+vn 0.7071068 0 -0.7071068
+vn -0.7071068 0 -0.7071068
+#end 8 normals 
+
+#begin 5 faces
+o floor_01
+g floor_01
+f 1/1/1 2/2/2 3/3/3 4/4/4 
+f 5/5/5 6/11/6 2/2/2 1/1/1 
+f 6/6/6 7/10/7 3/3/3 2/2/2 
+f 7/7/7 8/9/8 4/4/4 3/3/3 
+f 8/8/8 5/12/5 1/1/1 4/4/4 
+#end 5 faces
+
+#begin properties
+#U3DPROPERTIES_02 table {Mesh table {SymPlane table {Point vector3d 0 0 0  Normal vector3d 1 0 0  Threshold double 0.01 Enabled bool false UPos double 0.5 LocalMode bool false } RootGroup CSubMeshGroup {Children table {Tile_0_0 CSubMeshGroup {Children table {} IslandIDs ints { 0 } BBoxUV box3d 0 0 0 0 0 0 BBox3D box3d 0 0 0 0 0 0 AreaUV double 0 Area3D double 0 IsRoot bool false TopoStable table {Selected bool false Box box3d 0 1 0 1 0 1 U int 0 V int 0 NU int 0 NV int 0 Tiling vector3d 50 50 1  TileRatioMode string "1:1" } IsTile bool true } } IslandIDs ints { } BBoxUV box3d 0 0 0 0 0 0 BBox3D box3d 0 0 0 0 0 0 AreaUV double 0 Area3D double 0 IsRoot bool true TopoStable table {Selected bool false Box box3d 0 1 0 1 0 1 U int 0 V int 0 NU int 1 NV int 1 Tiling vector3d 50 50 1  TileRatioMode string "1:1" Pack table {Rotate table {Mode int 2 Min double 0 Max double 180 Step double 0 } SpacingSize double 0.00390625 MarginSize double 0.001953125 Resolution int 200 Scaling table {Mode int 0 } LayoutScalingMode int 2 MaxMutations int 1 } } IsTile bool false } Maps table {Density table {PrimType string "Polygon" Size int 1 DefaultValue double 1 ScaleType string "Log" MinValue double 0.1 MaxValue double 4 Data doubles { r 5 1 } } Pin table {PrimType string "Vertex" Size int 1 DefaultValue double 0 ScaleType string "Normalized" MinValue double 0 MaxValue double 1 Data doubles { r 12 0 } } Protect table {PrimType string "Vertex" Size int 1 DefaultValue double 0 ScaleType string "Normalized" MinValue double -1 MaxValue double 1 Data doubles { r 12 0 } } } } }
+#end properties
+
+#begin 0 fatal error vertex (that Unfold3D cannot handle)
+#end 0 fatal error vertex (that Unfold3D cannot handle)
+
+#begin 0 error vertex
+#end 0 error vertex

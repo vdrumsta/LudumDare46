@@ -1,0 +1,112 @@
+#File written by LIBUNFOLD3D. Compilation :Apr 13 2018,19:30:35
+mtllib 
+#begin vertices
+v 40 300 -50
+v 50 300 -50
+v 50.00001 300 -140.1571
+v 40 300 -140.1571
+v 40 10 -50
+v 50 10 -50
+v 50 10 -140.1571
+v -50 10 -150.1571
+v -50 10 -140.1571
+v -50 300 -140.1571
+v -50 300 -150.1571
+v 40 10 -140.1571
+v 40 300 -150.1571
+v 40 10 -150.1571
+v 50.00001 300 -150.1571
+v 50.00001 10 -150.1571
+v 40 0 -150.1571
+v -50 0 -150.1571
+v 50 0 -50
+v 50 0 -140.1571
+v 50.00001 0 -150.1571
+#end vertices
+
+#begin 36 textures vertices 
+vt 0.02646235 0.02646237 0
+vt 0.02646235 0.001953144 0
+vt 0.001953125 0.7409817 0
+vt 0.2474305 0.02646237 0
+vt 0.02646235 0.7372299 0
+vt 0.4994318 0.02646235 0
+vt 0.7204 0.02646235 0
+vt 0.4925228 0.7372299 0
+vt 0.4680136 0.7372299 0
+vt 0.4680136 0.02646237 0
+vt 0.7529546 0.001953125 0
+vt 0.2474305 0.7372299 0
+vt 0.2474305 0.001953144 0
+vt 0.9735376 0.7127207 0
+vt 0.02646235 0.7409817 0
+vt 0.9980469 0.7127207 0
+vt 0.9735376 0.7372299 0
+vt 0.7529546 0.7372299 0
+vt 0.4994318 0.001953125 0
+vt 0.7204 0.001953125 0
+vt 0.9980469 0.7372299 0
+vt 0.9735376 0.001953125 0
+vt 0.7204 0.7372299 0
+vt 0.9980469 0.001953125 0
+vt 0.7449092 0.7372299 0
+vt 0.7449092 0.02646235 0
+vt 0.7449092 0.001953125 0
+vt 0.001953125 0.02646237 0
+vt 0.001953125 0.7372299 0
+vt 0.4994318 0.7372299 0
+vt 0.4680136 0.001953144 0
+vt 0.4925228 0.02646237 0
+vt 0.7529546 0.7127207 0
+vt 0.02646235 0.7654909 0
+vt 0.2474305 0.001953125 0
+vt 0.001953125 0.7654909 0
+#end 36 textures vertices 
+
+#begin 15 normals 
+vn -0.5773503 0.5773503 0.5773503
+vn 0.5773503 0.5773503 0.5773503
+vn 0.7071068 0.7071068 1.648e-07
+vn -0.3015113 0.904534 0.3015113
+vn -0.7071068 0 0.7071068
+vn 0.8944272 0 0.4472136
+vn 1 -6.6e-09 4.026e-07
+vn -0.4472136 0 -0.8944272
+vn -0.5773503 0.5773503 -0.5773503
+vn 0 0.7071068 -0.7071068
+vn 0 0 -1
+vn 0.5773503 0.5773503 -0.5773501
+vn 0.7071071 0 -0.7071065
+vn 1 0 4.23e-08
+vn 1 0 4.026e-07
+#end 15 normals 
+
+#begin 15 faces
+o wall_angle_001
+g wall_angle_001
+f 1/1/1 2/2/2 3/35/3 4/4/4 
+f 5/5/5 6/29/6 2/28/2 1/1/1 
+f 6/6/6 7/7/7 3/23/3 2/30/2 
+f 8/8/8 9/9/5 10/10/1 11/32/9 
+f 9/9/5 12/12/5 4/4/4 10/10/1 
+f 13/13/10 11/31/9 10/10/1 4/4/4 
+f 14/14/11 8/33/8 11/11/9 13/22/10 
+f 12/12/5 5/5/5 1/1/1 4/4/4 
+f 13/34/10 4/36/4 3/3/3 15/15/12 
+f 13/22/10 15/24/12 16/16/13 14/14/11 
+f 15/25/12 3/23/3 7/7/7 16/26/13 
+f 8/33/8 14/14/11 17/17/11 18/18/11 
+f 7/7/7 6/6/6 19/19/14 20/20/15 
+f 14/14/11 16/16/13 21/21/13 17/17/11 
+f 16/26/13 7/7/7 20/20/15 21/27/13 
+#end 15 faces
+
+#begin properties
+#U3DPROPERTIES_02 table {Mesh table {SymPlane table {Point vector3d 0 0 0  Normal vector3d 1 0 0  Threshold double 0.01 Enabled bool false UPos double 0.5 LocalMode bool false } RootGroup CSubMeshGroup {Children table {Tile_0_0 CSubMeshGroup {Children table {} IslandIDs ints { 0 1 2 3 } BBoxUV box3d 0 0 0 0 0 0 BBox3D box3d 0 0 0 0 0 0 AreaUV double 0 Area3D double 0 IsRoot bool false TopoStable table {Selected bool false Box box3d 0 1 0 1 0 1 U int 0 V int 0 NU int 0 NV int 0 Tiling vector3d 50 50 1  TileRatioMode string "1:1" } IsTile bool true } } IslandIDs ints { } BBoxUV box3d 0 0 0 0 0 0 BBox3D box3d 0 0 0 0 0 0 AreaUV double 0 Area3D double 0 IsRoot bool true TopoStable table {Selected bool false Box box3d 0 1 0 1 0 1 U int 0 V int 0 NU int 1 NV int 1 Tiling vector3d 50 50 1  TileRatioMode string "1:1" Pack table {Rotate table {Mode int 2 Min double 0 Max double 180 Step double 0 } SpacingSize double 0.00390625 MarginSize double 0.001953125 Resolution int 200 Scaling table {Mode int 0 } LayoutScalingMode int 2 MaxMutations int 1 } } IsTile bool false } Maps table {Density table {PrimType string "Polygon" Size int 1 DefaultValue double 1 ScaleType string "Log" MinValue double 0.1 MaxValue double 4 Data doubles { r 15 1 } } Pin table {PrimType string "Vertex" Size int 1 DefaultValue double 0 ScaleType string "Normalized" MinValue double 0 MaxValue double 1 Data doubles { r 36 0 } } Protect table {PrimType string "Vertex" Size int 1 DefaultValue double 0 ScaleType string "Normalized" MinValue double -1 MaxValue double 1 Data doubles { r 36 0 } } } } }
+#end properties
+
+#begin 0 fatal error vertex (that Unfold3D cannot handle)
+#end 0 fatal error vertex (that Unfold3D cannot handle)
+
+#begin 0 error vertex
+#end 0 error vertex
