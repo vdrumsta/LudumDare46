@@ -18,6 +18,7 @@ public class StatTypeClass
 {
     public StatType statName;
     [Range(0, 100)] public float value;
+    public float reducePerSecond = 1f;
 }
 
 [Serializable]
@@ -50,8 +51,7 @@ public class PlantController : MonoBehaviour
 {
     public Animator animator;
 
-    // This is only used for initial values. 
-    // Change stats dictionary if you wanna change the stat
+    // Change stats dictionary if you wanna change the stat, not the list
     public List<StatTypeClass> statsList = new List<StatTypeClass>();
     public Dictionary<StatType, float> stats = new Dictionary<StatType, float>();
     public List<StatSliderClass> statBars = new List<StatSliderClass>();
@@ -88,6 +88,8 @@ public class PlantController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ReduceStats();
+
         var newTarget = PickNewTarget();
 
         FindAndAttackTarget(newTarget);
@@ -101,6 +103,15 @@ public class PlantController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             stats[StatType.Hunger] -= 20;
+        }
+    }
+
+    private void ReduceStats()
+    {
+        foreach(var stat in statsList)
+        {
+            stats[stat.statName] -= stat.reducePerSecond * Time.deltaTime;
+            stats[stat.statName] = stats[stat.statName] < 0 ? 0 : stats[stat.statName];
         }
     }
 
