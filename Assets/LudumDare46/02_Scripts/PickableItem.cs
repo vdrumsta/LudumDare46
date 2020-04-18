@@ -37,10 +37,18 @@ public class PickableItem : MonoBehaviour
         transform.rotation = placedOnObject.rotation;
     }
 
-    public void DropItem()
+    public void DropItem(PlaceableSurface surface)
     {
         // should turn on physics and roll around
-        transform.parent = null;
-        stayStill = false;
+        if (surface)
+        {
+            transform.parent = surface.transform;
+            transform.position = surface.positionOfItem.position;
+        }
+        else
+        {
+            transform.parent = null;
+            stayStill = false;
+        }
     }
 }

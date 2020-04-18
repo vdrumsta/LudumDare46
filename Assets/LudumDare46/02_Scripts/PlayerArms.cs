@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PlayerArms : MonoBehaviour
 {
-    public bool hasItemInHand;
-
     private PickableItem itemAvailable;
+    private PlaceableSurface surfaceAvailable;
+
     private PickableItem itemInHand;
     public PickableItem ItemInHand
     {
@@ -30,11 +30,10 @@ public class PlayerArms : MonoBehaviour
                 ItemInHand = itemAvailable;
                 itemAvailable = null;
                 itemInHand.PlaceItemAtLocation(transform);
-                Debug.Log("Picked up the " + ItemInHand.name);
             }
             else if (itemInHand)
             {
-                itemInHand.DropItem();
+                itemInHand.DropItem(surfaceAvailable);
                 ItemInHand = null;
             }
         }
@@ -43,19 +42,33 @@ public class PlayerArms : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         PickableItem item = other.GetComponent<PickableItem>();
+        PlaceableSurface surface = other.GetComponent<PlaceableSurface>();
+
         if (item && !ItemInHand)
         {
-            Debug.Log("Can pick up " + item.name);
             itemAvailable = item;
+        }
+
+        if (surface)
+        {
+            Debug.Log("Placeable surface detected");
+            surfaceAvailable = surface;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
         PickableItem item = other.GetComponent<PickableItem>();
+        PlaceableSurface surface = other.GetComponent<PlaceableSurface>();
+
         if (item && !ItemInHand)
         {
             itemAvailable = null;
+        }
+
+        if (surface)
+        {
+            surfaceAvailable = null;
         }
     }
 }
