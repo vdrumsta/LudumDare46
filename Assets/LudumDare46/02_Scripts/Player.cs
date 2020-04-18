@@ -9,11 +9,13 @@ public class Player : MonoBehaviour
     private CharacterController controller;
     private Vector3 velocityVector;
     private PlayerFeet feet;
+    private PlayerArms arms;
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
         feet = GetComponentInChildren<PlayerFeet>();
+        arms = GetComponentInChildren<PlayerArms>();
     }
 
     void Update()
