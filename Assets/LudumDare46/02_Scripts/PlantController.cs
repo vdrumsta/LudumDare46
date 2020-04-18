@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 
 [Serializable]
@@ -19,6 +20,32 @@ public class StatTypeClass
     [Range(0, 100)] public float value;
 }
 
+[Serializable]
+public class StatSliderClass
+{
+    public StatType statName;
+    public Slider slider;
+    public Gradient colorGradient;
+    public Image fill;
+    public float sliderValue;
+    public float SliderValue
+    {
+        get
+        {
+            return sliderValue;
+        }
+
+        set
+        {
+            sliderValue = value;
+            var currentColor = colorGradient.Evaluate(value / 100);
+            fill.color = currentColor;
+            slider.value = value;
+        }
+    }
+}
+
+
 public class PlantController : MonoBehaviour
 {
     public Animator animator;
@@ -27,6 +54,8 @@ public class PlantController : MonoBehaviour
     // Change stats dictionary if you wanna change the stat
     public List<StatTypeClass> statsList = new List<StatTypeClass>();
     public Dictionary<StatType, float> stats = new Dictionary<StatType, float>();
+    public List<StatSliderClass> statBars = new List<StatSliderClass>();
+
     public float eatRadius;
     public PlantRotate rotateScript;
     public float angleOfAttack = 5f;
@@ -61,7 +90,30 @@ public class PlantController : MonoBehaviour
     {
         var newTarget = PickNewTarget();
 
+        FindAndAttackTarget(newTarget);
 
+        UpdateStatsBars();
+
+        // For debugging to see the stat values in editor
+        UpdateStatsList();
+
+        // For debugging
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            stats[StatType.Hunger] -= 20;
+        }
+    }
+
+    private void UpdateStatsBars()
+    {
+        foreach(var bar in statBars)
+        {
+            bar.SliderValue = stats[bar.statName];
+        }
+    }
+
+    private void FindAndAttackTarget(AttackableObject newTarget)
+    {
         if (newTarget)
         {
             rotateScript.SetTarget(newTarget.transform);
@@ -81,9 +133,6 @@ public class PlantController : MonoBehaviour
             rotateScript.SetTarget(null);
             IsAttacking = false;
         }
-
-        // For debugging to see the stat values in editor
-        UpdateStatsList();
     }
 
     private void UpdateStatsList()
