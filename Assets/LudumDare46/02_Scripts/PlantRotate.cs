@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,9 +15,14 @@ public class PlantRotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Get angle between 2 vectors
-        //Mathf.Acos(Vector3.Dot(vector1.normalized, vector2.normalized));
+        if (target)
+        {
+            RotateTowardsTarget();
+        }
+    }
 
+    private void RotateTowardsTarget()
+    {
         var playerRotation = transform.forward;
         playerRotation.y = 0;
 
@@ -33,10 +39,15 @@ public class PlantRotate : MonoBehaviour
         if (debug)
         {
             // Draw a ray pointing at our target in
-            Debug.DrawRay(transform.position, newDirection, Color.red);
+            Debug.DrawRay(transform.position, targetDirection, Color.red);
         }
 
         // Calculate a rotation a step closer to the target and applies rotation to this object
         transform.rotation = Quaternion.LookRotation(newDirection);
+    }
+
+    public void SetTarget(Transform newTarget)
+    {
+        target = newTarget;
     }
 }
