@@ -59,6 +59,9 @@ public class PlantController : MonoBehaviour
     public float eatRadius;
     public PlantRotate rotateScript;
     public float angleOfAttack = 5f;
+    private List<GameObject> swallowedItems = new List<GameObject>();
+    public Transform spitPoint;
+    public float spitForce = 1f;
 
     private bool isAttacking;
     public bool IsAttacking
@@ -190,6 +193,8 @@ public class PlantController : MonoBehaviour
         List<AttackableObject> attackableObjectsInRange = new List<AttackableObject>();
         foreach (var attackableObject in attackableObjects)
         {
+            if (!(attackableObject.isAttackable)) continue;
+
             var levelPosition = attackableObject.transform.position;
             levelPosition.y = transform.position.y;
 
@@ -201,17 +206,21 @@ public class PlantController : MonoBehaviour
         
         if (attackableObjectsInRange.Count <= 0) return null;
 
+        Debug.Log("Objects in range = " + attackableObjectsInRange.Count);
+
         // Based on which stat is the lowest stat for the plant, 
         // target the one that gives the most in that stat
         StatType lowestStatType = GetLowestStat();
-        AttackableObject mostValueableObject = attackableObjectsInRange[0];
+        AttackableObject mostValueableObject = null;
+        float highestStatValue = 0;
 
-        for (int i = 1; i < attackableObjectsInRange.Count; i++)
+        for (int i = 0; i < attackableObjectsInRange.Count; i++)
         {
-            if (attackableObjectsInRange[i].GetStatFillValue(lowestStatType) >
-                mostValueableObject.GetStatFillValue(lowestStatType))
+            var currentObjectStatValue = attackableObjectsInRange[i].GetStatFillValue(lowestStatType);
+            if(currentObjectStatValue > highestStatValue)
             {
                 mostValueableObject = attackableObjectsInRange[i];
+                highestStatValue = currentObjectStatValue;
             }
         }
 
@@ -230,5 +239,31 @@ public class PlantController : MonoBehaviour
         float angleToTarget = Vector3.Angle(lookDirection, targetDirection);
 
         return angleToTarget < angleOfAttack;
+    }
+
+    public void Swallow(GameObject itemToSwallow, float spitAfterSecond)
+    {
+        swallowedItems.Add(itemToSwallow);
+        itemToSwallow.SetActive(false);
+        StartCoroutine(SpitAfterTime(itemToSwallow, spitAfterSecond));
+    }
+
+    IEnumerator SpitAfterTime(GameObject swallowedItem, float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+
+        if (swallowedItems.Contains(swallowedItem))
+        {
+            swallowedItems.Remove(swallowedItem);
+        }
+
+        swallowedItem.transform.position = spitPoint.position;
+        swallowedItem.SetActive(true);
+
+        var itemRb = swallowedItem.GetComponent<Rigidbody>();
+        itemRb?.AddForce(transform.forward * spitForce, ForceMode.VelocityChange);
+
+        var attackableObjScript = swallowedItem.GetComponent<AttackableObject>();
+        StartCoroutine(attackableObjScript.ChangeIsAttackableForTime(false, 2));
     }
 }

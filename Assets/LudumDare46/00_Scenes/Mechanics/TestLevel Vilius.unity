@@ -5776,6 +5776,7 @@ GameObject:
   - component: {fileID: 1636843842}
   - component: {fileID: 1636843841}
   - component: {fileID: 1636843845}
+  - component: {fileID: 1636843846}
   m_Layer: 0
   m_Name: Console
   m_TagString: Untagged
@@ -5866,10 +5867,25 @@ MonoBehaviour:
   - statName: 2
     value: 20
     reducePerSecond: 0
-  destroyUponAttack: 1
+  destroyUponAttack: 0
   damageObjectLayerMask:
     serializedVersion: 2
     m_Bits: 256
+  isAttackable: 1
+--- !u!114 &1636843846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636843840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 533f90d2f35b3114bb6509b91d4c111f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spitAfterSecond: 2
+  attackableScript: {fileID: 1636843845}
 --- !u!4 &1638980351 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 0d4648f8bf7a1894983ca9baf415ee56,

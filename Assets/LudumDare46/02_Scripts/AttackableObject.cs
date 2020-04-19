@@ -10,6 +10,7 @@ public class AttackableObject : MonoBehaviour, IObservable<PlantController>
     public bool destroyUponAttack = true;
     public LayerMask damageObjectLayerMask;
     private List<IObserver<PlantController>> _observers = new List<IObserver<PlantController>>();
+    public bool isAttackable = true;
 
     void Start()
     {
@@ -48,15 +49,16 @@ public class AttackableObject : MonoBehaviour, IObservable<PlantController>
             var rootObject = other.gameObject.GetComponent<ColliderRootReference>().root;
             var plantController = rootObject.GetComponent<PlantController>();
 
-            if (plantController.IsAttacking)
-                FillPlantStats(plantController);
-            
+            if (!plantController.IsAttacking) return;
+
+            // Inform observers that they were touched
             foreach (var observer in _observers)
             {
                 observer.OnNext(plantController);
             }
 
-            if (destroyUponAttack && plantController.IsAttacking)
+            FillPlantStats(plantController);
+            if (destroyUponAttack)
                 Destroy(gameObject);
         }
     }
@@ -86,5 +88,12 @@ public class AttackableObject : MonoBehaviour, IObservable<PlantController>
             if (_observer != null && _observers.Contains(_observer))
                 _observers.Remove(_observer);
         }
+    }
+
+    public IEnumerator ChangeIsAttackableForTime(bool targetAttackableState, float seconds)
+    {
+        isAttackable = targetAttackableState;
+        yield return new WaitForSeconds(seconds);
+        isAttackable = !targetAttackableState;
     }
 }
