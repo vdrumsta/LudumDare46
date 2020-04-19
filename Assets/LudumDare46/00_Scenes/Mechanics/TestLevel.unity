@@ -469,25 +469,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1620375824}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &163207008 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8321528491808284203, guid: c79006a71e40f1345b3f51fce9c40809,
-    type: 3}
-  m_PrefabInstance: {fileID: 621233845}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &163207013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 163207008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2738ef493e438d74cb451a3581dc7e21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  root: {fileID: 1056609272}
 --- !u!1001 &171889653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3213,12 +3194,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d4648f8bf7a1894983ca9baf415ee56, type: 3}
---- !u!1 &1056609272 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8321528491089809516, guid: c79006a71e40f1345b3f51fce9c40809,
-    type: 3}
-  m_PrefabInstance: {fileID: 621233845}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1065349583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4314,32 +4289,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 668464197}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1250452830 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2854022813525587304, guid: 6838534834fbf984299c63472c7db021,
-    type: 3}
-  m_PrefabInstance: {fileID: 2079094150}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1250452836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1250452830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e26c30d51a196ce488d4c84a199c45ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  statFillValuesList:
-  - statName: 3
-    value: 5
-    reducePerSecond: 0
-  destroyUponAttack: 1
-  damageObjectLayerMask:
-    serializedVersion: 2
-    m_Bits: 256
 --- !u!4 &1267767425 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: d187d8c1db8c39e408f75d98dc51c5cb,
@@ -5229,6 +5178,26 @@ PrefabInstance:
     - target: {fileID: 1941648110114704684, guid: 0ac280496aa83eb42a5d7e4bc54dcbcd,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7794951482615959830, guid: 0ac280496aa83eb42a5d7e4bc54dcbcd,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7794951482615959830, guid: 0ac280496aa83eb42a5d7e4bc54dcbcd,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7794951482615959830, guid: 0ac280496aa83eb42a5d7e4bc54dcbcd,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7794951482615959830, guid: 0ac280496aa83eb42a5d7e4bc54dcbcd,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

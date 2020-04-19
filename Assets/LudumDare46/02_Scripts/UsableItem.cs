@@ -111,4 +111,26 @@ public class UsableItem : PickableItem
             percentageFull += amountToAdd;
         }
     }
+
+    public override void PlaceItemAtLocation(Transform placedOnObject)
+    {
+        base.PlaceItemAtLocation(placedOnObject);
+    }
+
+    public override void DropItem(PlaceableSurface surface)
+    {
+        base.DropItem(surface);
+        AttackableObject attackable = GetComponent<AttackableObject>();
+
+        if (attackable)
+        {
+            if(canBeUsedFor == UseType.CookedFood)
+            {
+                attackable.statFillValuesList.Clear();
+                attackable.statFillValuesList.Add(new StatTypeClass(StatType.Hunger, percentageFull, 0f));
+                attackable.statFillValuesList.Add(new StatTypeClass(StatType.Happiness, (percentageFull > 0.5f) ? 0.3f : -0.2f, 0f));
+            }
+            attackable.RefreshAttackableObject();
+        }
+    }
 }

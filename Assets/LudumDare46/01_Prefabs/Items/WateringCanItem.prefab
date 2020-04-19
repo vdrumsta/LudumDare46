@@ -242,6 +242,7 @@ GameObject:
   - component: {fileID: 2854022813525587605}
   - component: {fileID: 2854022813525587606}
   - component: {fileID: 2854022813525587607}
+  - component: {fileID: 1250452836}
   m_Layer: 0
   m_Name: WateringCanItem
   m_TagString: Untagged
@@ -317,6 +318,7 @@ MonoBehaviour:
   interactionHitBox: {fileID: 1328479611}
   fillBar: {fileID: 1476306459}
   useSpeed: 0.03
+  autoStart: 0
 --- !u!65 &2854022813525587607
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -330,6 +332,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.8941803, y: 0.31479836, z: 0.86665344}
   m_Center: {x: 0.003566742, y: 0.16274548, z: -0.43457222}
+--- !u!114 &1250452836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2854022813525587304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e26c30d51a196ce488d4c84a199c45ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statFillValuesList:
+  - statName: 3
+    value: 5
+    reducePerSecond: 0
+  destroyUponAttack: 1
+  damageObjectLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &2854022814073397646
 GameObject:
   m_ObjectHideFlags: 0

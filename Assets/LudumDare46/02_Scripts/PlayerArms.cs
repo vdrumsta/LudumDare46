@@ -26,7 +26,7 @@ public class PlayerArms : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            if (itemAvailable && !itemAvailable.itemInUse)// pick up item
+            if (!placebaleSurfaceAvailable && itemAvailable && !itemAvailable.itemInUse)// pick up item
             {
                 itemInHand = itemAvailable;
                 itemAvailable = null;

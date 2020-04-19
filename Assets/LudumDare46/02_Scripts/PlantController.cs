@@ -19,6 +19,13 @@ public class StatTypeClass
     public StatType statName;
     [Range(0, 100)] public float value;
     public float reducePerSecond = 1f;
+
+    public StatTypeClass(StatType statName, float value, float reducePerSecond)
+    {
+        this.statName = statName;
+        this.value = value;
+        this.reducePerSecond = reducePerSecond;
+    }
 }
 
 [Serializable]

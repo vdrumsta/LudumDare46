@@ -13,7 +13,13 @@ public class AttackableObject : MonoBehaviour, IObservable<PlantController>
 
     void Start()
     {
-        foreach(var statFillValue in statFillValuesList)
+        RefreshAttackableObject();
+    }
+
+    public void RefreshAttackableObject()
+    {
+        statFillValues.Clear();
+        foreach (var statFillValue in statFillValuesList)
         {
             statFillValues.Add(statFillValue.statName, statFillValue.value);
         }
