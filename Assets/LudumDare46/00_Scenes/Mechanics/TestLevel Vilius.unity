@@ -5878,7 +5878,8 @@ MonoBehaviour:
   visualElement: {fileID: 0}
   interactionHitBox: {fileID: 1409144829}
   fillBar: {fileID: 889794307}
-  useSpeed: 0.03
+  useSpeed: 0.000001
+  autoStart: 1
 --- !u!54 &1636843843
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7836,6 +7837,7 @@ MonoBehaviour:
   interactionHitBox: {fileID: 5476267071705211719}
   fillBar: {fileID: 5476267072121485351}
   useSpeed: 0.03
+  autoStart: 0
 --- !u!65 &7810399830622808235
 BoxCollider:
   m_ObjectHideFlags: 0

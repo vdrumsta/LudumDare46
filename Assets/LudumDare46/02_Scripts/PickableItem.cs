@@ -8,7 +8,7 @@ public class PickableItem : MonoBehaviour
     public bool itemInUse;
 
     private Rigidbody itemRigidbody;
-    private GameObject objectPlacedOn;
+    protected GameObject objectPlacedOn;
 
     public delegate void ItemDelegate(PickableItem item);
     public ItemDelegate itemDestroyedDelegate;

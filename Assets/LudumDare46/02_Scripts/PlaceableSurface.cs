@@ -57,12 +57,33 @@ public class PlaceableSurface : MonoBehaviour
     public void PlaceItemOnMe(PickableItem item)
     {
         itemOnSurface = item;
+
+        // Stop an autoStart item using charge when it's placed 
+        if (itemOnSurface is UsableItem)
+        {
+            UsableItem usableTempItem = itemOnSurface as UsableItem;
+            if (usableTempItem.autoStart)
+            {
+                usableTempItem.StopUse();
+            }
+        }
     }
 
     public PickableItem TakeItemFromMe()
     {
         PickableItem tempItem = itemOnSurface;
         itemOnSurface = null;
+
+        // Start using the item if it's autoStart
+        if (tempItem is UsableItem)
+        {
+            UsableItem usableTempItem = tempItem as UsableItem;
+            if (usableTempItem.percentageFull > 0 && usableTempItem.autoStart)
+            {
+                usableTempItem.StartUse();
+            }
+        }
+
         return tempItem;
     }
 }

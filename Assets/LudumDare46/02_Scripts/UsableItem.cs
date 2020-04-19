@@ -24,6 +24,7 @@ public class UsableItem : PickableItem
     public UsableItemUseComponent interactionHitBox;
     public Image fillBar;
     public float useSpeed;
+    public bool autoStart;
 
     public delegate void UsableItemDelegate();
     public UsableItemDelegate onStartDelegate;
@@ -69,6 +70,14 @@ public class UsableItem : PickableItem
         {
             yield return new WaitForSeconds(useSpeed);
             RemoveFromItem(1);
+
+            // if autoStart, call onStartDelegate which will check if plant is in range
+            // and fill its stats
+            if (autoStart)
+            {
+                onStartDelegate?.Invoke();
+            }
+
             if (percentageFull <= 0)
             {
                 StopUse();

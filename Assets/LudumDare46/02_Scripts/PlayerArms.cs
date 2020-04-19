@@ -66,7 +66,7 @@ public class PlayerArms : MonoBehaviour
             if(itemInHand && itemInHand is UsableItem)
             {
                 UsableItem item = itemInHand as UsableItem;
-                if (item.percentageFull > 0)
+                if (item.percentageFull > 0 && !item.autoStart)
                 {
                     item.StartUse();
                 }
@@ -77,7 +77,10 @@ public class PlayerArms : MonoBehaviour
             if (itemInHand && itemInHand is UsableItem)
             {
                 UsableItem item = itemInHand as UsableItem;
-                item.StopUse();
+                if (!item.autoStart)
+                {
+                    item.StopUse();
+                }
             }
         }
     }
