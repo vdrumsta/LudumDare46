@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 4028479581257562218}
   - component: {fileID: 4028479581257562219}
   - component: {fileID: -1194502997179750203}
+  - component: {fileID: 2229298739512344346}
   m_Layer: 0
   m_Name: CookedFoodTest
   m_TagString: Untagged
@@ -232,6 +233,30 @@ MonoBehaviour:
   interactionHitBox: {fileID: 2961921067478898806}
   fillBar: {fileID: 4039457784652306593}
   useSpeed: 0
+  autoStart: 0
+--- !u!114 &2229298739512344346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4028479581257562260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e26c30d51a196ce488d4c84a199c45ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statFillValuesList:
+  - statName: 0
+    value: 0
+    reducePerSecond: 0
+  - statName: 2
+    value: 0
+    reducePerSecond: 0
+  destroyUponAttack: 1
+  damageObjectLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &8991468505158023902
 GameObject:
   m_ObjectHideFlags: 0

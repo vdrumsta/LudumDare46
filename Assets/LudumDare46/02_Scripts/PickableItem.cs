@@ -37,7 +37,7 @@ public class PickableItem : MonoBehaviour
         itemDestroyedDelegate?.Invoke(this);
     }
 
-    public void PlaceItemAtLocation(Transform placedOnObject)
+    public virtual void PlaceItemAtLocation(Transform placedOnObject)
     {
         //should stay static and attack to a parent object
         itemInUse = true;
@@ -46,7 +46,7 @@ public class PickableItem : MonoBehaviour
         transform.rotation = placedOnObject.rotation;
     }
 
-    public void DropItem(PlaceableSurface surface)
+    public virtual void DropItem(PlaceableSurface surface)
     {
         // should turn on physics and roll around
         if (surface)

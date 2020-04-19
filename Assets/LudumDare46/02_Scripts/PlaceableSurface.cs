@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlaceableSurface : MonoBehaviour
 {
@@ -18,9 +19,9 @@ public class PlaceableSurface : MonoBehaviour
     public bool consumesItem;
     public UseType typeToConsume;
     public PickableItem itemToSpawn;
-    public ConsumableItem itemNeeded;
     public int numberNeeded;
     private int amountOnSurface;
+    public TextMeshProUGUI textForConsumeables;
 
     private void Update()
     {
@@ -30,7 +31,7 @@ public class PlaceableSurface : MonoBehaviour
             if (amountOnSurface == numberNeeded && itemOnSurface == null)
             {
                 amountOnSurface = 0;
-                itemOnSurface = Instantiate(itemToSpawn, positionOfItem.position, positionOfItem.rotation, transform);
+                PlaceItemOnMe(Instantiate(itemToSpawn, positionOfItem.position, positionOfItem.rotation, transform));
             }
             else if (consumableItem && consumableItem.canBeUsedFor == typeToConsume)
             {
@@ -39,28 +40,28 @@ public class PlaceableSurface : MonoBehaviour
                 itemOnSurface = null;
                 amountOnSurface++;
             }
-        }
-        else
-        {
-            if (itemOnSurface is UsableItem)
-            {
-                UsableItem item = itemOnSurface as UsableItem;
 
-                if (item.percentageFull != 100 && hasItemOnCoroutine == null)
-                {
-                    hasItemOnCoroutine = StartCoroutine(HasItemOnRoutine(item));
-                }
-                else if (item.percentageFull == 100 && hasItemOnCoroutine != null)
-                {
-                    StopCoroutine(hasItemOnCoroutine);
-                    hasItemOnCoroutine = null;
-                }
+            textForConsumeables.text = amountOnSurface + "/" + numberNeeded;
+        }
+
+        if (itemOnSurface is UsableItem)
+        {
+            UsableItem item = itemOnSurface as UsableItem;
+
+            if (item.percentageFull != 100 && hasItemOnCoroutine == null)
+            {
+                hasItemOnCoroutine = StartCoroutine(HasItemOnRoutine(item));
             }
-            else if (hasItemOnCoroutine != null)
+            else if (item.percentageFull == 100 && hasItemOnCoroutine != null)
             {
                 StopCoroutine(hasItemOnCoroutine);
                 hasItemOnCoroutine = null;
             }
+        }
+        else if (hasItemOnCoroutine != null)
+        {
+            StopCoroutine(hasItemOnCoroutine);
+            hasItemOnCoroutine = null;
         }
     }
 
