@@ -41,19 +41,23 @@ public class AttackableObject : MonoBehaviour, IObservable<PlantController>
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(gameObject.name + " has been attacked");
         // Check if other object layer is part of damage object layer mask
         if (damageObjectLayerMask == (damageObjectLayerMask | (1 << other.gameObject.layer)))
         {
+            
             var rootObject = other.gameObject.GetComponent<ColliderRootReference>().root;
             var plantController = rootObject.GetComponent<PlantController>();
-            FillPlantStats(plantController);
+
+            if (plantController.IsAttacking)
+                FillPlantStats(plantController);
             
             foreach (var observer in _observers)
             {
                 observer.OnNext(plantController);
             }
 
-            if (destroyUponAttack)
+            if (destroyUponAttack && plantController.IsAttacking)
                 Destroy(gameObject);
         }
     }
