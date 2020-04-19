@@ -26,8 +26,11 @@ public class PlantRotate : MonoBehaviour
         var playerRotation = transform.forward;
         playerRotation.y = 0;
 
+        var targetPosition = target.position;
+        targetPosition.y = 0;
+
         // Determine which direction to rotate towards
-        Vector3 targetDirection = target.position - transform.position;
+        Vector3 targetDirection = targetPosition - transform.position;
         targetDirection.y = 0;
 
         // The step size is equal to speed times frame time.

@@ -41,7 +41,6 @@ public class AttackableObject : MonoBehaviour, IObservable<PlantController>
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(gameObject.name + " has been attacked");
         // Check if other object layer is part of damage object layer mask
         if (damageObjectLayerMask == (damageObjectLayerMask | (1 << other.gameObject.layer)))
         {
