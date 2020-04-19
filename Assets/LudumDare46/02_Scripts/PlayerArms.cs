@@ -6,10 +6,6 @@ public class PlayerArms : MonoBehaviour
 {
     private PickableItem itemAvailable;
     private PlaceableSurface surfaceAvailable;
-    private Coroutine useItemCoroutine;
-
-    [SerializeField]
-    private float useSpeed;
 
     private PickableItem itemInHand;
     public PickableItem ItemInHand
@@ -63,34 +59,21 @@ public class PlayerArms : MonoBehaviour
                 UsableItem item = itemInHand as UsableItem;
                 if (item.percentageFull > 0)
                 {
-                    useItemCoroutine = StartCoroutine(UseItemRoutine(item));
+                    item.StartUse();
                 }
             }
         }
         else if (Input.GetButtonUp("Fire2"))
         {
-            if (useItemCoroutine != null)
+            if (itemInHand && itemInHand is UsableItem)
             {
-                StopCoroutine(useItemCoroutine);
-                useItemCoroutine = null;
+                UsableItem item = itemInHand as UsableItem;
+                item.StopUse();
             }
         }
     }
 
-    private IEnumerator UseItemRoutine(UsableItem item)
-    {
-        do
-        {
-            yield return new WaitForSeconds(useSpeed);
-            item.UseItem(1);
-            if (item.percentageFull <= 0)
-            {
-                useItemCoroutine = null;
-                break;
-            }
-            
-        } while (true);
-    }
+    
 
     private void OnTriggerEnter(Collider other)
     {
