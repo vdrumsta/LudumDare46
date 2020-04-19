@@ -10,7 +10,7 @@ public class PlayerHealth : MonoBehaviour, IObserver<PlantController>
     [HideInInspector] public int currentHearts;
 
     public bool immune;
-    public List<Material> playerMaterials;
+    public List<Material> playerMaterials = new List<Material>();
     public float flashInterval = 0.1f;
 
     private int maxHealth;
