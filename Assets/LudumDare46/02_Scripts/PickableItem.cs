@@ -10,6 +10,9 @@ public class PickableItem : MonoBehaviour
     private Rigidbody itemRigidbody;
     private GameObject objectPlacedOn;
 
+    public delegate void ItemDelegate(PickableItem item);
+    public ItemDelegate itemDestroyedDelegate;
+
     // Start is called before the first frame update
     protected virtual void Start()
     {
@@ -27,6 +30,11 @@ public class PickableItem : MonoBehaviour
         {
             itemRigidbody.constraints = RigidbodyConstraints.None;
         }
+    }
+
+    private void OnDestroy()
+    {
+        itemDestroyedDelegate?.Invoke(this);
     }
 
     public void PlaceItemAtLocation(Transform placedOnObject)

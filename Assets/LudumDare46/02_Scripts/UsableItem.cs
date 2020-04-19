@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum UseType
+{
+    PourWater,
+    FillWithWater,
+    ChargeElectronics,
+    SunshinePlant,
+    Food
+}
+
 public class UsableItem : PickableItem
 {
-    public enum UseType
-    {
-        PourWater,
-        FillWithWater,
-        ChargeElectronics,
-        SunshinePlant
-    }
+    
 
     public UseType canGetFromSurface;
     public UseType canBeUsedFor;

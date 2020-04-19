@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerArms : MonoBehaviour
 {
     private PickableItem itemAvailable;
-    private PlaceableSurface surfaceAvailable;
+    private PlaceableSurface placebaleSurfaceAvailable;
+    private SpawnableSurface spawnableSurfaceAvailable;
 
     private PickableItem itemInHand;
     public PickableItem ItemInHand
@@ -31,18 +32,26 @@ public class PlayerArms : MonoBehaviour
                 itemAvailable = null;
                 itemInHand.PlaceItemAtLocation(transform);
             }
-            else if (surfaceAvailable)
+            else if (placebaleSurfaceAvailable)
             {
-                if (itemInHand && !surfaceAvailable.itemOnSurface)// place item on surface
+                if (itemInHand && !placebaleSurfaceAvailable.itemOnSurface)// place item on surface
                 {
-                    surfaceAvailable.PlaceItemOnMe(ItemInHand);
-                    itemInHand.DropItem(surfaceAvailable);
+                    placebaleSurfaceAvailable.PlaceItemOnMe(ItemInHand);
+                    itemInHand.DropItem(placebaleSurfaceAvailable);
                     ItemInHand = null;
                 }
-                else if (surfaceAvailable.itemOnSurface && !itemInHand)// take item from surface
+                else if (placebaleSurfaceAvailable.itemOnSurface && !itemInHand)// take item from surface
                 {
-                    ItemInHand = surfaceAvailable.TakeItemFromMe();
+                    ItemInHand = placebaleSurfaceAvailable.TakeItemFromMe();
                     itemAvailable = null;
+                    itemInHand.PlaceItemAtLocation(transform);
+                }
+            }
+            else if (spawnableSurfaceAvailable && ItemInHand == null)// spawn and get item from surface
+            {
+                ItemInHand = spawnableSurfaceAvailable.GetObjectFromSurface();
+                if (itemInHand)// check to see if we got an item
+                {
                     itemInHand.PlaceItemAtLocation(transform);
                 }
             }
@@ -78,32 +87,44 @@ public class PlayerArms : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         PickableItem item = other.GetComponent<PickableItem>();
-        PlaceableSurface surface = other.GetComponent<PlaceableSurface>();
+        PlaceableSurface placeableSurface = other.GetComponent<PlaceableSurface>();
+        SpawnableSurface spawnableSurface = other.GetComponent<SpawnableSurface>();
 
         if (item && !ItemInHand)
         {
             itemAvailable = item;
         }
 
-        if (surface)
+        if (placeableSurface)
         {
-            surfaceAvailable = surface;
+            placebaleSurfaceAvailable = placeableSurface;
+        }
+
+        if (spawnableSurface)
+        {
+            spawnableSurfaceAvailable = spawnableSurface;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
         PickableItem item = other.GetComponent<PickableItem>();
-        PlaceableSurface surface = other.GetComponent<PlaceableSurface>();
+        PlaceableSurface placeableSurface = other.GetComponent<PlaceableSurface>();
+        SpawnableSurface spawnableSurface = other.GetComponent<SpawnableSurface>();
 
         if (item && !ItemInHand)
         {
             itemAvailable = null;
         }
 
-        if (surface)
+        if (placeableSurface)
         {
-            surfaceAvailable = null;
+            placebaleSurfaceAvailable = null;
+        }
+
+        if (spawnableSurface)
+        {
+            spawnableSurfaceAvailable = null;
         }
     }
 }
