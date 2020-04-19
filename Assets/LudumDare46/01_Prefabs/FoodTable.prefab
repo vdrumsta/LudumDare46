@@ -120,7 +120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 873c85a6c8c669d4daede9aabb272d80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToSpawn: {fileID: 0}
+  objectToSpawn: {fileID: 4521153785576283183, guid: 095409a5a13bfb84cbddb52addad5563,
+    type: 3}
   maxNumberInExistance: 5
 --- !u!1 &7865219783061115564
 GameObject:
@@ -180,7 +181,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4765656954686367367, guid: 21b8faa2baddb8940b1325011ce58b57, type: 3}
+  - {fileID: 2100000, guid: 83674117c0880f745bb8d44e2f71c55b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
