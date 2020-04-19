@@ -29,7 +29,11 @@ public class UsableItem : PickableItem
     protected override void Start()
     {
         base.Start();
-        visualElement.SetActive(percentageFull > 0);
+
+        if (visualElement)
+        {
+            visualElement.SetActive(percentageFull > 0);
+        }
     }
 
     protected override void Update()
@@ -73,7 +77,10 @@ public class UsableItem : PickableItem
     {
         if (percentageFull > 0)
         {
-            visualElement.SetActive(percentageFull > 0);
+            if (visualElement)
+            {
+                visualElement.SetActive(percentageFull > 0);
+            }
             percentageFull -= amountToAdd;
         }
     }
@@ -81,8 +88,11 @@ public class UsableItem : PickableItem
     public void AddFromSurface(UseType typeToAdd, int amountToAdd)
     {
         if (percentageFull <100 && typeToAdd == canGetFromSurface)
-        { 
-            visualElement.SetActive(percentageFull > 0);
+        {
+            if (visualElement)
+            {
+                visualElement.SetActive(percentageFull > 0);
+            }
             percentageFull += amountToAdd;
         }
     }
