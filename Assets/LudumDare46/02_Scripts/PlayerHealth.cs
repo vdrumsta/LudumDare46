@@ -3,10 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealth : MonoBehaviour, IObserver<PlantController>
 {
-    // When collide with this layer, player loses health
-    public LayerMask damageObjectLayerMask;
+    public AttackableObject attackableScript;
     public List<GameObject> healthHearts;
     [HideInInspector] public int currentHearts;
 
@@ -22,15 +21,25 @@ public class PlayerHealth : MonoBehaviour
         maxHealth = healthHearts.Count;
         currentHearts = healthHearts.Count;
         GhostPlayerMaterials(false);
+
+        if (attackableScript)
+            attackableScript.Subscribe(this);
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void OnCompleted()
     {
-        // Check if other object layer is part of damage object layer mask
-        if (damageObjectLayerMask == (damageObjectLayerMask | (1 << other.gameObject.layer)))
-        {
-            DecreaseHealth();
-        }
+        throw new NotImplementedException();
+    }
+
+    public void OnError(Exception error)
+    {
+        throw new NotImplementedException();
+    }
+
+    // On getting attacked, reduce health
+    public void OnNext(PlantController plantController)
+    {
+        DecreaseHealth();
     }
 
     private void IncreaseHealth()

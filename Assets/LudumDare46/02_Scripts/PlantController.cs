@@ -106,13 +106,20 @@ public class PlantController : MonoBehaviour
         }
     }
 
+    public void AddStat(StatType statType, float amount)
+    {
+        stats[statType] += amount;
+    }
+
     private void ReduceStats()
     {
         foreach(var stat in statsList)
         {
             stats[stat.statName] -= stat.reducePerSecond * Time.deltaTime;
-            stats[stat.statName] = stats[stat.statName] < 0 ? 0 : stats[stat.statName];
+            stats[stat.statName] = Mathf.Clamp(stats[stat.statName], 0, 100);
         }
+
+        
     }
 
     private void UpdateStatsBars()
