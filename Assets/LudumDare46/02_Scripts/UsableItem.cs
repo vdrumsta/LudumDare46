@@ -9,6 +9,8 @@ public class UsableItem : PickableItem
     {
         PourWater,
         FillWithWater,
+        ChargeElectronics,
+        SunshinePlant
     }
 
     public UseType canGetFromSurface;
