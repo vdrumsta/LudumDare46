@@ -9,18 +9,20 @@ public class UsableItem : PickableItem
     {
         PourWater,
         FillWithWater,
-
     }
 
     public UseType canGetFromSurface;
     public UseType canBeUsedFor;
+    public StatType statTypeForPlant;
     public float percentageFull;
     public GameObject visualElement;
-    public GameObject interactionHitBox;
+    public UsableItemUseComponent interactionHitBox;
     public Image fillBar;
+    public float useSpeed;
 
-    [SerializeField]
-    private float useSpeed;
+    public delegate void UsableItemDelegate();
+    public UsableItemDelegate onStartDelegate;
+    public UsableItemDelegate onStopDelegate;
 
     private Coroutine useItemCoroutine;
 
@@ -28,7 +30,6 @@ public class UsableItem : PickableItem
     {
         base.Start();
         visualElement.SetActive(percentageFull > 0);
-        interactionHitBox.SetActive(false);
     }
 
     protected override void Update()
@@ -39,15 +40,18 @@ public class UsableItem : PickableItem
 
     public void StartUse()
     {
+        onStartDelegate?.Invoke();
         useItemCoroutine = StartCoroutine(UseItemRoutine());
-        interactionHitBox.SetActive(true);
     }
 
     public void StopUse()
     {
-        StopCoroutine(useItemCoroutine);
+        onStopDelegate?.Invoke();
+        if (useItemCoroutine != null)
+        {
+            StopCoroutine(useItemCoroutine);
+        }
         useItemCoroutine = null;
-        interactionHitBox.SetActive(false);
     }
 
     private IEnumerator UseItemRoutine()

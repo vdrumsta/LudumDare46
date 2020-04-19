@@ -22,7 +22,7 @@ public class PlaceableSurface : MonoBehaviour
             {
                 hasItemOnCoroutine = StartCoroutine(HasItemOnRoutine(item));
             }
-            else if(item.percentageFull == 100)
+            else if(item.percentageFull == 100 && hasItemOnCoroutine != null)
             {
                 StopCoroutine(hasItemOnCoroutine);
                 hasItemOnCoroutine = null;
