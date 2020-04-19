@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/LudumDare46/00_Scenes/Random/Interactable Menu.unity
+    path: Assets/LudumDare46/00_Scenes/Random/Main Menu.unity
     guid: ccece2214238648468e337d940f136df
   - enabled: 1
     path: Assets/LudumDare46/00_Scenes/TemplateScene.unity

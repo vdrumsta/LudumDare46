@@ -13,6 +13,8 @@ public class PlayerHealth : MonoBehaviour, IObserver<PlantController>
     public List<Material> playerMaterials = new List<Material>();
     public float flashInterval = 0.1f;
 
+    public GameObject deathScreen;
+
     private int maxHealth;
 
     // Start is called before the first frame update
@@ -62,8 +64,14 @@ public class PlayerHealth : MonoBehaviour, IObserver<PlantController>
 
         if (currentHearts <= 0)
         {
-            // Die();
+            Die();
         }
+    }
+
+    private void Die()
+    {
+        deathScreen.SetActive(true);
+        Destroy(gameObject);
     }
 
     IEnumerator RemoveImmunityAfterTime(float seconds)

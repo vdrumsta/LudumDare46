@@ -7,7 +7,7 @@ public class AttackableObject : MonoBehaviour, IObservable<PlantController>
 {
     public Dictionary<StatType, float> statFillValues = new Dictionary<StatType, float>();
     public List<StatTypeClass> statFillValuesList = new List<StatTypeClass>();
-
+    public bool destroyUponAttack = true;
     public LayerMask damageObjectLayerMask;
     private List<IObserver<PlantController>> _observers = new List<IObserver<PlantController>>();
 
@@ -53,7 +53,8 @@ public class AttackableObject : MonoBehaviour, IObservable<PlantController>
                 observer.OnNext(plantController);
             }
 
-            Destroy(gameObject);
+            if (destroyUponAttack)
+                Destroy(gameObject);
         }
     }
 

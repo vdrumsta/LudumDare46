@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneHelper : MonoBehaviour
 {
-    public string sceneName;
-
     public void NextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -17,9 +15,9 @@ public class SceneHelper : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
-    public void LoadSceneByPublicReference()
+    public void RestartScene()
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void QuitGame()
