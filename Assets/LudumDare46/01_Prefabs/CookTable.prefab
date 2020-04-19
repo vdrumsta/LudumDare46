@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4765656954686367367, guid: 21b8faa2baddb8940b1325011ce58b57, type: 3}
+  - {fileID: 2100000, guid: 1d83d448230b5f549a3cccac90025221, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -169,10 +169,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   positionOfItem: {fileID: 1941648109149948259}
   itemOnSurface: {fileID: 0}
-  consumesItem: 1
   fillSpeed: 0.1
   typeSurfaceAdds: 4
+  consumesItem: 1
   typeToConsume: 4
+  itemToSpawn: {fileID: -1194502997179750203, guid: ac288e2bf77ea214e9e23fca03ee725d,
+    type: 3}
+  itemNeeded: {fileID: 4521153785576283183, guid: 095409a5a13bfb84cbddb52addad5563,
+    type: 3}
+  numberNeeded: 3
 --- !u!1 &7625706587401579343
 GameObject:
   m_ObjectHideFlags: 0

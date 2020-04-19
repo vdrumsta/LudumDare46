@@ -9,7 +9,8 @@ public enum UseType
     FillWithWater,
     ChargeElectronics,
     SunshinePlant,
-    Food
+    RawFood,
+    CookedFood
 }
 
 public class UsableItem : PickableItem

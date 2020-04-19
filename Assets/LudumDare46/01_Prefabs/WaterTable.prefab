@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 2358662829029717749}
   - component: {fileID: 2358662829029717746}
   m_Layer: 0
-  m_Name: TableSurface
+  m_Name: WaterTable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90,8 +90,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   positionOfItem: {fileID: 2358662828937245371}
   itemOnSurface: {fileID: 0}
+  consumesItem: 0
   fillSpeed: 0.1
   typeSurfaceAdds: 1
+  typeToConsume: 0
 --- !u!1001 &2358662830526024094
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -159,6 +161,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Table_001
       objectReference: {fileID: 0}
+    - target: {fileID: 8405317065323677370, guid: 21b8faa2baddb8940b1325011ce58b57,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 23ad79a5b340fe340b58d63a8dc87882, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21b8faa2baddb8940b1325011ce58b57, type: 3}
 --- !u!4 &7332163205448491652 stripped
