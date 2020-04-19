@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{a1933671-6521-483a-b9f9-89238519b1c8}">
+		<property name="assetPath">
+			<value>Elettric/glitchedtones_EMF Error FX 02.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.35994791666666665</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a8c15fb0-e569-4025-b8f6-1af687724853}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{d2884eb9-a632-468d-8eb2-e1ae516cd204}">
+		<property name="assetPath">
+			<value>Water/household_wok_fill_with_water_from_tap.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.0826666666666669</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a8c15fb0-e569-4025-b8f6-1af687724853}</destination>
+		</relationship>
+	</object>
+</objects>

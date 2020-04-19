@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{6b3f4a9f-3de0-423d-bf91-678e6cf28672}">
+		<property name="assetPath">
+			<value>Ambience/tspt_city_spring_indoor_ambience_loop_019.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>167.16</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a8c15fb0-e569-4025-b8f6-1af687724853}</destination>
+		</relationship>
+	</object>
+</objects>

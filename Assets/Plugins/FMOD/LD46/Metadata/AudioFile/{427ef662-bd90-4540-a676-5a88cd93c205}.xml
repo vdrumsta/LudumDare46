@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{427ef662-bd90-4540-a676-5a88cd93c205}">
+		<property name="assetPath">
+			<value>Cooking/Blastwave_FX_FireBarnInt_S08FI.2 - Trimmed.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>8.0049206349206354</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a8c15fb0-e569-4025-b8f6-1af687724853}</destination>
+		</relationship>
+	</object>
+</objects>
