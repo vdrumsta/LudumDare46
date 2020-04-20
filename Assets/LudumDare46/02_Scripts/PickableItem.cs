@@ -13,10 +13,14 @@ public class PickableItem : MonoBehaviour
     public delegate void ItemDelegate(PickableItem item);
     public ItemDelegate itemDestroyedDelegate;
 
+    private Vector3 spawnPosition;
+    public int maxDistanceFromSpawn = 15;
+
     // Start is called before the first frame update
     protected virtual void Start()
     {
         itemRigidbody = this.GetComponent<Rigidbody>();
+        spawnPosition = this.transform.position;
     }
 
     // Update is called once per frame
@@ -29,6 +33,18 @@ public class PickableItem : MonoBehaviour
         else
         {
             itemRigidbody.constraints = RigidbodyConstraints.None;
+        }
+
+        if(Mathf.Abs(Vector3.Distance(transform.position, spawnPosition)) > maxDistanceFromSpawn)
+        {
+            if(this is ConsumableItem)
+            {
+                Destroy(this.gameObject);
+            }
+            else
+            {
+                transform.position = spawnPosition;
+            }
         }
     }
 
