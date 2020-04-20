@@ -90,7 +90,7 @@
 	<object class="MixerBusPanner" id="{e0e0a35d-e75d-45ba-b73e-b99d0888c029}" />
 	<object class="SnapshotModule" id="{df805bd0-e7e7-4047-8be0-bf4c28b67005}">
 		<property name="length">
-			<value>2</value>
+			<value>1.9199999999999999</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{930d20e1-8bdb-4863-bf69-be7e3c93465b}</destination>
@@ -118,7 +118,7 @@
 			<value>0</value>
 		</property>
 		<property name="length">
-			<value>2</value>
+			<value>1.9199999999999999</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{2eec5ab9-664d-42ca-a6d5-74308cae58f0}</destination>
