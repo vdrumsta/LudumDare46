@@ -235,7 +235,7 @@ public class PlantController : MonoBehaviour
                 break;
             }
         }
-        return GetStat(StatType.Happiness) > stat.maxValueSatisfaction;
+        return GetStat(statType) > stat.maxValueSatisfaction;
     }
 
     private AttackableObject PickNewTarget()
