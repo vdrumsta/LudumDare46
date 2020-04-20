@@ -46,7 +46,13 @@ public class PlantRotate : MonoBehaviour
         }
 
         // Calculate a rotation a step closer to the target and applies rotation to this object
-        transform.rotation = Quaternion.LookRotation(newDirection);
+        var newRotation = Quaternion.LookRotation(newDirection);
+
+        // Rotate only around Y-axis
+        newRotation.x = 0;
+        newRotation.z = 0;
+
+        transform.rotation = newRotation;
     }
 
     public void SetTarget(Transform newTarget)
