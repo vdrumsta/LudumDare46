@@ -5312,38 +5312,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 102ca39bfe2dc744dbc8fa8efe284ea5, type: 3}
---- !u!1 &1239277407 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2854022813525587304, guid: 6838534834fbf984299c63472c7db021,
-    type: 3}
-  m_PrefabInstance: {fileID: 2894096331370080297}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1239277408 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1250452836, guid: 6838534834fbf984299c63472c7db021,
-    type: 3}
-  m_PrefabInstance: {fileID: 2894096331370080297}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1239277407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e26c30d51a196ce488d4c84a199c45ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1239277409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1239277407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 533f90d2f35b3114bb6509b91d4c111f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spitAfterSecond: 2
-  attackableScript: {fileID: 1239277408}
 --- !u!4 &1239970831 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 422100091711252043, guid: 5549f18c6be38eb42a646d08d99cfde7,
@@ -10099,6 +10067,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2854022813525587606, guid: 6838534834fbf984299c63472c7db021,
+        type: 3}
+      propertyPath: turnOnSound
+      value: event:/Objects/Water can emplty
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6838534834fbf984299c63472c7db021, type: 3}
 --- !u!4 &4088508699594887280 stripped
@@ -10168,6 +10141,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5762551566780433636, guid: 5d0221918f4087f488c7a0dbd30c7cbb,
+        type: 3}
+      propertyPath: turnOnSound
+      value: event:/Objects/BoomBox IN ST
       objectReference: {fileID: 0}
     - target: {fileID: 5762551566780433638, guid: 5d0221918f4087f488c7a0dbd30c7cbb,
         type: 3}

@@ -15,7 +15,9 @@ public enum UseType
 
 public class UsableItem : PickableItem
 {
-    
+    [FMODUnity.EventRef]
+    public string turnOnSound = "";
+    private FMOD.Studio.EventInstance soundEvent;
 
     public UseType canGetFromSurface;
     public UseType canBeUsedFor;
@@ -82,12 +84,21 @@ public class UsableItem : PickableItem
 
     public void StartUse()
     {
+        // Fmod play sound
+        if (turnOnSound.Length != 0)
+        {
+            soundEvent = FMODUnity.RuntimeManager.CreateInstance(turnOnSound);
+            soundEvent.start();
+            Debug.Log("Playing turn on sound");
+        }
+
         onStartDelegate?.Invoke();
         useItemCoroutine = StartCoroutine(UseItemRoutine());
     }
 
     public void StopUse()
     {
+        soundEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         onStopDelegate?.Invoke();
         if (useItemCoroutine != null)
         {

@@ -124,6 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxDistanceFromSpawn: 15
+  turnOnSound: event:/Objects/BoomBox IN ST
   canGetFromSurface: 2
   canBeUsedFor: 3
   statTypeForPlant: 2
@@ -148,7 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statFillValuesList:
   - statName: 2
-    value: 20
+    value: 1
     reducePerSecond: 0
     maxValueSatisfaction: 0
   destroyUponAttack: 0

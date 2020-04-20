@@ -313,7 +313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statFillValuesList:
   - statName: 0
-    value: 50
+    value: 10
     reducePerSecond: 0
     maxValueSatisfaction: 0
   destroyUponAttack: 0

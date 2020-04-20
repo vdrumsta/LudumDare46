@@ -199,6 +199,7 @@ GameObject:
   - component: {fileID: 2854022813525587606}
   - component: {fileID: 2854022813525587607}
   - component: {fileID: 1250452836}
+  - component: {fileID: 1239277409}
   m_Layer: 0
   m_Name: WateringCanItem
   m_TagString: Untagged
@@ -268,6 +269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxDistanceFromSpawn: 15
+  turnOnSound: event:/Objects/Water can emplty
   canGetFromSurface: 1
   canBeUsedFor: 0
   statTypeForPlant: 3
@@ -305,7 +307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statFillValuesList:
   - statName: 3
-    value: 5
+    value: 1
     reducePerSecond: 0
     maxValueSatisfaction: 0
   destroyUponAttack: 0
@@ -313,6 +315,20 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   isAttackable: 1
+--- !u!114 &1239277409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2854022813525587304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 533f90d2f35b3114bb6509b91d4c111f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spitAfterSecond: 2
+  attackableScript: {fileID: 1250452836}
 --- !u!1 &2854022814073397646
 GameObject:
   m_ObjectHideFlags: 0

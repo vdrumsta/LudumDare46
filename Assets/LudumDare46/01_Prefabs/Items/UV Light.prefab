@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 5534099699318042561}
   - component: {fileID: 4932241277288828051}
   - component: {fileID: 3338983262724637575}
+  - component: {fileID: 1020114032}
+  - component: {fileID: 6621332834069842550}
   m_Layer: 0
   m_Name: UV Light
   m_TagString: Untagged
@@ -66,6 +68,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxDistanceFromSpawn: 15
+  turnOnSound: event:/Objects/UV lamp
   canGetFromSurface: 2
   canBeUsedFor: 3
   statTypeForPlant: 1
@@ -103,7 +106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statFillValuesList:
   - statName: 1
-    value: 20
+    value: 1
     reducePerSecond: 0
     maxValueSatisfaction: 0
   destroyUponAttack: 0
@@ -111,6 +114,34 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   isAttackable: 1
+--- !u!114 &1020114032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5534099699318041663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 533f90d2f35b3114bb6509b91d4c111f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spitAfterSecond: 2
+  attackableScript: {fileID: 3338983262724637575}
+--- !u!114 &6621332834069842550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5534099699318041663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 533f90d2f35b3114bb6509b91d4c111f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spitAfterSecond: 2
+  attackableScript: {fileID: 3338983262724637575}
 --- !u!1 &7734533218518500321
 GameObject:
   m_ObjectHideFlags: 0

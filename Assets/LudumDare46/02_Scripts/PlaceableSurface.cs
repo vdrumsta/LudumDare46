@@ -32,13 +32,7 @@ public class PlaceableSurface : MonoBehaviour
 
     private void Start()
     {
-        // FMOD
-        if (placeDownSound.Length != 0)
-        {
-            //Debug.Log(gameObject.name + " attached sound = " + placeDownSound);
-            
-            //FMODUnity.RuntimeManager.AttachInstanceToGameObject(soundEvent);
-        }
+
     }
 
     private void Update()
