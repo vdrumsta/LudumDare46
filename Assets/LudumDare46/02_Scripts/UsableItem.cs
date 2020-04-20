@@ -23,9 +23,12 @@ public class UsableItem : PickableItem
     public float percentageFull;
     public GameObject visualElement;
     public UsableItemUseComponent interactionHitBox;
-    public Image fillBar;
     public float useSpeed;
     public bool autoStart;
+    public LineRenderer fillBar;
+    public float fillBarDistanceAboveItem = 0.5f;
+    private float[] fillBarPoints;
+    private Vector3 fillBarLocalStartingPos;
 
     public delegate void UsableItemDelegate();
     public UsableItemDelegate onStartDelegate;
@@ -41,12 +44,39 @@ public class UsableItem : PickableItem
         {
             visualElement.SetActive(percentageFull > 0);
         }
+
+        
+        if (fillBar)
+        {
+            // Get the start and end point of the fillBar
+            fillBarPoints = new float[2];
+            fillBarPoints[0] = fillBar.GetPosition(0).x;
+            fillBarPoints[1] = fillBar.GetPosition(1).x;
+
+            // Get the starting pos of fillBar
+            fillBarLocalStartingPos = fillBar.transform.localPosition;
+        }
     }
 
     protected override void Update()
     {
         base.Update();
-        fillBar.fillAmount = percentageFull/100f;
+        
+        if (fillBar)
+        {
+            // Change fill bar fill
+            var endPointRatio = Mathf.Lerp(fillBarPoints[0], fillBarPoints[1], percentageFull / 100f);
+            Vector3 fillBarNewEndPoint = new Vector3(endPointRatio, 0, 0);
+            fillBar.SetPosition(1, fillBarNewEndPoint);
+
+            // Keep the item above the usable item
+            var newPos = fillBarLocalStartingPos;
+            newPos.y = transform.position.y + fillBarDistanceAboveItem;
+            fillBar.transform.position = newPos;
+
+            // Set rotation to always be the same
+            fillBar.transform.rotation = Quaternion.Euler(Vector3.zero);
+        }
     }
 
     public void StartUse()
