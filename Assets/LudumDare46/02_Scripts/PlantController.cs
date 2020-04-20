@@ -276,7 +276,7 @@ public class PlantController : MonoBehaviour
             foreach (var objInRange in attackableObjectsInRange)
             {
                 if (objInRange.statFillValues.ContainsKey(stat.statName) 
-                    && objInRange.statFillValues[stat.statName] < highestStatValue)
+                    && objInRange.statFillValues[stat.statName] > highestStatValue)
                 {
                     mostValueableObject = objInRange;
                     highestStatValue = objInRange.statFillValues[stat.statName];
