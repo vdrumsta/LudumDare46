@@ -3218,7 +3218,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82e097e6127d0da42b20c595f230c0cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerStateEvent: event:/Actions/Cooking
   WinScreen: {fileID: 753205842}
   radialRoundImage: {fileID: 74618883}
   roundTime: 180
@@ -9780,7 +9779,7 @@ PrefabInstance:
     - target: {fileID: 5534099699318042564, guid: c039f42a070652d4ca97d98ffc2271da,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.528
       objectReference: {fileID: 0}
     - target: {fileID: 5534099699318042564, guid: c039f42a070652d4ca97d98ffc2271da,
         type: 3}
@@ -9955,7 +9954,7 @@ PrefabInstance:
     - target: {fileID: 5762551566780433634, guid: 5d0221918f4087f488c7a0dbd30c7cbb,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5762551566780433634, guid: 5d0221918f4087f488c7a0dbd30c7cbb,
         type: 3}
@@ -9965,7 +9964,7 @@ PrefabInstance:
     - target: {fileID: 5762551566780433634, guid: 5d0221918f4087f488c7a0dbd30c7cbb,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.0000028461216
       objectReference: {fileID: 0}
     - target: {fileID: 5762551566780433634, guid: 5d0221918f4087f488c7a0dbd30c7cbb,
         type: 3}
@@ -9980,7 +9979,7 @@ PrefabInstance:
     - target: {fileID: 5762551566780433634, guid: 5d0221918f4087f488c7a0dbd30c7cbb,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180.00002
       objectReference: {fileID: 0}
     - target: {fileID: 5762551566780433634, guid: 5d0221918f4087f488c7a0dbd30c7cbb,
         type: 3}
@@ -9990,7 +9989,7 @@ PrefabInstance:
     - target: {fileID: 5762551566780433638, guid: 5d0221918f4087f488c7a0dbd30c7cbb,
         type: 3}
       propertyPath: m_Name
-      value: Console
+      value: Boombox
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d0221918f4087f488c7a0dbd30c7cbb, type: 3}
