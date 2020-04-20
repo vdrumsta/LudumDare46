@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: event:/Plot/telephone
   guid: 3372339f87b04746a73c8ccf419a522d
   Banks:
-  - {fileID: 4258630353527707407}
+  - {fileID: -8791821932836182899}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -76,6 +76,24 @@ MonoBehaviour:
   Max: 3
   Default: 0
   Exists: 0
+--- !u!114 &-8791821932836182899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Plugins/FMOD/LD46/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637230249332580260
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-8735602632811584308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,7 +126,7 @@ MonoBehaviour:
   Path: event:/Objects/BoomBox IN ST
   guid: 751dd1f3bcd54c4ea22263d1f39a4d84
   Banks:
-  - {fileID: 4258630353527707407}
+  - {fileID: -8791821932836182899}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -219,7 +237,7 @@ MonoBehaviour:
   Path: event:/Plant/Burning
   guid: 5ea2da502f25564ab7813334930c5980
   Banks:
-  - {fileID: 4258630353527707407}
+  - {fileID: -8791821932836182899}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -491,6 +509,23 @@ MonoBehaviour:
   Max: 3
   Default: 0
   Exists: 0
+--- !u!114 &-6551998688173435715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Eating/Size
+  m_EditorClassIdentifier: 
+  Name: Size
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 1
 --- !u!114 &-6551996973852060595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -506,7 +541,7 @@ MonoBehaviour:
   Path: event:/Objects/Falling
   guid: ec8031ee98386440a8ee2da41c2f77db
   Banks:
-  - {fileID: 4258630353527707407}
+  - {fileID: -8791821932836182899}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -546,12 +581,12 @@ MonoBehaviour:
   Path: event:/Plant/Eating
   guid: 2aed8a8d52795b489a7b1a4859d3e2dc
   Banks:
-  - {fileID: 4258630353527707407}
+  - {fileID: -8791821932836182899}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 3974717992736359466}
+  - {fileID: -6551998688173435715}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -758,7 +793,7 @@ MonoBehaviour:
   Path: snapshot:/BoomBoxxON
   guid: 5111a1b2771e96458892e641db5ff764
   Banks:
-  - {fileID: 4258630353527707407}
+  - {fileID: -8791821932836182899}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -798,12 +833,12 @@ MonoBehaviour:
   Path: event:/Plant/Happiness Low
   guid: c2eb478854f7b04b92f22c81655d25e8
   Banks:
-  - {fileID: 4258630353527707407}
+  - {fileID: -8791821932836182899}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: -8735602632811584308}
+  - {fileID: -389920350689239010}
   MinDistance: 1
   MaxDistance: 20
   Length: 4544
@@ -942,14 +977,14 @@ MonoBehaviour:
   Path: event:/Soundtrack And Ambiences/Soundtrack
   guid: f1d79daadb44f64c9f3eeabfcb4fcfc9
   Banks:
-  - {fileID: 4258630353527707407}
+  - {fileID: -8791821932836182899}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 188437
+  Length: 180937
 --- !u!114 &-3737321786289485574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1000,7 +1035,7 @@ MonoBehaviour:
   Path: event:/Plant/Eating Mid
   guid: 4a9346a4155df249a147d92fa0d69cab
   Banks:
-  - {fileID: 4258630353527707407}
+  - {fileID: -8791821932836182899}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1057,7 +1092,7 @@ MonoBehaviour:
   Path: event:/Soundtrack And Ambiences/Ambience
   guid: 3cadb57ade88e64eaea6ab531c45e229
   Banks:
-  - {fileID: 4258630353527707407}
+  - {fileID: -8791821932836182899}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -1166,7 +1201,7 @@ MonoBehaviour:
   Path: event:/Character/Bitted
   guid: 814cd79c1928bd4cbbe290b02e4b90ca
   Banks:
-  - {fileID: 4258630353527707407}
+  - {fileID: -8791821932836182899}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1206,7 +1241,7 @@ MonoBehaviour:
   Path: event:/Actions/PlaceFood
   guid: 81e93cc03ca9ac4781558681b47c47f2
   Banks:
-  - {fileID: 4258630353527707407}
+  - {fileID: -8791821932836182899}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1317,6 +1352,23 @@ MonoBehaviour:
   Max: 3
   Default: 0
   Exists: 0
+--- !u!114 &-1260753094225746883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Food low/Size
+  m_EditorClassIdentifier: 
+  Name: Size
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 1
 --- !u!114 &-1097192118531533581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1349,7 +1401,7 @@ MonoBehaviour:
   Path: event:/Objects/Water can fill
   guid: 29a08c1c55c4b14e8a8f4bfb83693942
   Banks:
-  - {fileID: 4258630353527707407}
+  - {fileID: -8791821932836182899}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1372,7 +1424,7 @@ MonoBehaviour:
   Path: event:/Plant/Eating Small
   guid: 14788d44877f4e4488c996ba9af93f9d
   Banks:
-  - {fileID: 4258630353527707407}
+  - {fileID: -8791821932836182899}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1380,6 +1432,23 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 4358
+--- !u!114 &-389920350689239010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Happiness Low/Size
+  m_EditorClassIdentifier: 
+  Name: Size
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 1
 --- !u!114 &-221998037511912485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1470,7 +1539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 7363133539049551210}
-  - {fileID: 4258630353527707407}
+  - {fileID: -8791821932836182899}
   EditorEvents:
   - {fileID: -573637501530866077}
   - {fileID: 6567634367667761704}
@@ -1503,13 +1572,12 @@ MonoBehaviour:
   - {fileID: -1616244172687421958}
   - {fileID: -3995525392739695691}
   - {fileID: -8657761901313623984}
-  - {fileID: -87621674719179700}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 4258630353527707407}
+  - {fileID: -8791821932836182899}
   StringsBanks:
   - {fileID: 7363133539049551210}
-  stringsBankWriteTime: 637230249652393622
+  stringsBankWriteTime: 637230249332670008
   cacheVersion: 3
 --- !u!114 &100069445882710566
 MonoBehaviour:
@@ -1526,7 +1594,7 @@ MonoBehaviour:
   Path: event:/Objects/Sink
   guid: 77c891dff5eb4040853ec359aab2be37
   Banks:
-  - {fileID: 4258630353527707407}
+  - {fileID: -8791821932836182899}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1583,7 +1651,7 @@ MonoBehaviour:
   Path: event:/Plant/Light full
   guid: 6b07f1b84809dc4ea0d41fa8253a1991
   Banks:
-  - {fileID: 4258630353527707407}
+  - {fileID: -8791821932836182899}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1675,7 +1743,7 @@ MonoBehaviour:
   Path: event:/Character/Footsteps
   guid: eb486ec2ade3f9498eab2f4014826b9e
   Banks:
-  - {fileID: 4258630353527707407}
+  - {fileID: -8791821932836182899}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1801,7 +1869,7 @@ MonoBehaviour:
   Path: event:/Character/Trow
   guid: 6da0faefb4714e429386002eda112e3b
   Banks:
-  - {fileID: 4258630353527707407}
+  - {fileID: -8791821932836182899}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1910,12 +1978,12 @@ MonoBehaviour:
   Path: event:/Plant/Food low
   guid: ef7c355117583a478b467fc2e2bc48e0
   Banks:
-  - {fileID: 4258630353527707407}
+  - {fileID: -8791821932836182899}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 289375338851758939}
+  - {fileID: -1260753094225746883}
   MinDistance: 1
   MaxDistance: 20
   Length: 4500
@@ -2003,7 +2071,7 @@ MonoBehaviour:
   Path: event:/Objects/Water can emplty
   guid: 1802685ed4ff4749a6aec5bbd340a1f9
   Banks:
-  - {fileID: 4258630353527707407}
+  - {fileID: -8791821932836182899}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2112,7 +2180,7 @@ MonoBehaviour:
   Path: event:/Actions/Cooking
   guid: 5b2083c4a9f2b64ab852a9b53ecadf46
   Banks:
-  - {fileID: 4258630353527707407}
+  - {fileID: -8791821932836182899}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -2427,7 +2495,7 @@ MonoBehaviour:
   Path: event:/Character/Death
   guid: 3ac68cb8de51594ba0ddbc7cdeb4597f
   Banks:
-  - {fileID: 4258630353527707407}
+  - {fileID: -8791821932836182899}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2450,7 +2518,7 @@ MonoBehaviour:
   Path: event:/Character/PickUp
   guid: f1bdd71edd892d4192fac90a7d3447aa
   Banks:
-  - {fileID: 4258630353527707407}
+  - {fileID: -8791821932836182899}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2490,13 +2558,13 @@ MonoBehaviour:
   Path: event:/Objects/UV lamp
   guid: 39c71515de61184b8bbab14799e81bf1
   Banks:
-  - {fileID: 4258630353527707407}
+  - {fileID: -8791821932836182899}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 0
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
+  MinDistance: 1
+  MaxDistance: 20
   Length: 7354
 --- !u!114 &6379231228406697315
 MonoBehaviour:
@@ -2564,7 +2632,7 @@ MonoBehaviour:
   Path: event:/Actions/Burning Food
   guid: 1677a2611f5b96428852b682127926c3
   Banks:
-  - {fileID: 4258630353527707407}
+  - {fileID: -8791821932836182899}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -2587,7 +2655,7 @@ MonoBehaviour:
   Path: event:/SFX/Charging complete
   guid: 4dc7df77afba5a4e8e858c8dcbcce630
   Banks:
-  - {fileID: 4258630353527707407}
+  - {fileID: -8791821932836182899}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -2627,14 +2695,14 @@ MonoBehaviour:
   Path: event:/Plant/Move
   guid: 2f3065740bbf5745baf762e6a56e4334
   Banks:
-  - {fileID: 4258630353527707407}
+  - {fileID: -8791821932836182899}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 1000
+  Length: 2250
 --- !u!114 &6723729747120737991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2718,7 +2786,7 @@ MonoBehaviour:
   Path: event:/Plant/Light burn
   guid: 1ad50ffd0160da43908925ea6bd7203b
   Banks:
-  - {fileID: 4258630353527707407}
+  - {fileID: -8791821932836182899}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -2810,11 +2878,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/Plugins/FMOD/LD46/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637230249652393622
+  lastModified: 637230249332670008
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 2250
+    Value: 2214
   Exists: 1
 --- !u!114 &7451604219668872134
 MonoBehaviour:
@@ -2934,7 +3002,7 @@ MonoBehaviour:
   Path: event:/Plant/Eating Big
   guid: f5db31d2ff09f44882b36a725b66f0ab
   Banks:
-  - {fileID: 4258630353527707407}
+  - {fileID: -8791821932836182899}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2992,7 +3060,7 @@ MonoBehaviour:
   Path: event:/SFX/Charging remove
   guid: 83fa53489265264583756502b271ba41
   Banks:
-  - {fileID: 4258630353527707407}
+  - {fileID: -8791821932836182899}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3015,7 +3083,7 @@ MonoBehaviour:
   Path: event:/SFX/Charging
   guid: 8a3f4243a2dc6746aba97555a6f6a7c9
   Banks:
-  - {fileID: 4258630353527707407}
+  - {fileID: -8791821932836182899}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
