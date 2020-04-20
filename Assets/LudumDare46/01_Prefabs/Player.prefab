@@ -44,8 +44,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 5.32, z: 1}
-  m_Center: {x: 0, y: 0.45513916, z: 0}
+  m_Size: {x: 0.8, y: 2, z: 0.8}
+  m_Center: {x: 0, y: -0.18, z: -0.41}
 --- !u!114 &1395886724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,8 +137,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.41819954, z: 0.831312}
-  m_Center: {x: 0, y: -0.881999, z: 0.084344}
+  m_Size: {x: 0.5, y: 0.41819954, z: 0.5}
+  m_Center: {x: 0, y: -0.97, z: 0}
 --- !u!114 &9182177876009715852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,10 +216,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.4
+  m_Height: 1.5
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -0.3, z: 0}
 --- !u!143 &9182177877245493584
 CharacterController:
   m_ObjectHideFlags: 0
@@ -231,13 +231,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
+  m_Height: 1.5
+  m_Radius: 0.4
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -0.3, z: 0}
 --- !u!114 &9182177877245493585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efab07b9df284824f899618b4ae49232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 10
+  movementSpeed: 5
 --- !u!54 &397459680
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -283,6 +283,7 @@ MonoBehaviour:
   - statName: 0
     value: 50
     reducePerSecond: 0
+    maxValueSatisfaction: 0
   destroyUponAttack: 0
   damageObjectLayerMask:
     serializedVersion: 2
@@ -380,17 +381,17 @@ PrefabInstance:
     - target: {fileID: 8059107198757263749, guid: cf4584d75aad727459e7084931bc6c18,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8059107198757263749, guid: cf4584d75aad727459e7084931bc6c18,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8059107198757263749, guid: cf4584d75aad727459e7084931bc6c18,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf4584d75aad727459e7084931bc6c18, type: 3}
