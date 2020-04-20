@@ -259,7 +259,7 @@ Transform:
   m_GameObject: {fileID: 2854022813525587304}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 35.07, y: 17.73, z: 6.34}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 2854022814073397642}
   - {fileID: 7125031535098960775}
@@ -312,7 +312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canGetFromSurface: 1
   canBeUsedFor: 0
-  statTypeForPlant: 0
+  statTypeForPlant: 3
   percentageFull: 0
   visualElement: {fileID: 2854022814073397646}
   interactionHitBox: {fileID: 1328479611}
@@ -348,10 +348,12 @@ MonoBehaviour:
   - statName: 3
     value: 5
     reducePerSecond: 0
-  destroyUponAttack: 1
+    maxValueSatisfaction: 0
+  destroyUponAttack: 0
   damageObjectLayerMask:
     serializedVersion: 2
     m_Bits: 256
+  isAttackable: 1
 --- !u!1 &2854022814073397646
 GameObject:
   m_ObjectHideFlags: 0

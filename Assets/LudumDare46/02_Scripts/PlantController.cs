@@ -233,8 +233,6 @@ public class PlantController : MonoBehaviour
         
         if (attackableObjectsInRange.Count <= 0) return null;
 
-        Debug.Log("Objects in range = " + attackableObjectsInRange.Count);
-
         // Based on which stat is the lowest stat for the plant, 
         // target the one that gives the most in that stat
         StatType lowestStatType = GetLowestStat();
