@@ -11,6 +11,7 @@ public class PlayerArms : MonoBehaviour
     public delegate void PlayerArmsDelegate();
     public PlayerArmsDelegate onPickUpDelegate;
     public PlayerArmsDelegate onDropDelegate;
+    public Transform itemLocation;
 
     private PickableItem itemInHand;
     public PickableItem ItemInHand
@@ -34,7 +35,7 @@ public class PlayerArms : MonoBehaviour
             {
                 itemInHand = itemAvailable;
                 itemAvailable = null;
-                itemInHand.PlaceItemAtLocation(transform);
+                itemInHand.PlaceItemAtLocation(itemLocation);
                 onPickUpDelegate?.Invoke();
             }
             else if (placebaleSurfaceAvailable)
@@ -49,7 +50,7 @@ public class PlayerArms : MonoBehaviour
                 {
                     ItemInHand = placebaleSurfaceAvailable.TakeItemFromMe();
                     itemAvailable = null;
-                    itemInHand.PlaceItemAtLocation(transform);
+                    itemInHand.PlaceItemAtLocation(itemLocation);
                 }
             }
             else if (spawnableSurfaceAvailable && ItemInHand == null)// spawn and get item from surface
