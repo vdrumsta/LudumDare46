@@ -2494,6 +2494,11 @@ PrefabInstance:
       propertyPath: statBars.Array.data[3].fill
       value: 
       objectReference: {fileID: 101495933}
+    - target: {fileID: 8321528491089809519, guid: c79006a71e40f1345b3f51fce9c40809,
+        type: 3}
+      propertyPath: deathScreen
+      value: 
+      objectReference: {fileID: 1947904308}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c79006a71e40f1345b3f51fce9c40809, type: 3}
 --- !u!4 &627420213 stripped
@@ -5111,16 +5116,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1336168275}
     m_Modifications:
-    - target: {fileID: 1941648110114704682, guid: 0ac280496aa83eb42a5d7e4bc54dcbcd,
-        type: 3}
-      propertyPath: placeDownSound
-      value: event:/Actions/Cooking
-      objectReference: {fileID: 0}
-    - target: {fileID: 1941648110114704682, guid: 0ac280496aa83eb42a5d7e4bc54dcbcd,
-        type: 3}
-      propertyPath: consumeItemSound
-      value: event:/Actions/PlaceFood
-      objectReference: {fileID: 0}
     - target: {fileID: 1941648110114704683, guid: 0ac280496aa83eb42a5d7e4bc54dcbcd,
         type: 3}
       propertyPath: m_Name
@@ -8960,11 +8955,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1336168275}
     m_Modifications:
-    - target: {fileID: 2358662829029717746, guid: c8bb58427470bc54ea218074d5ab7a36,
-        type: 3}
-      propertyPath: placeDownSound
-      value: event:/Objects/Water can fill
-      objectReference: {fileID: 0}
     - target: {fileID: 2358662829029717747, guid: c8bb58427470bc54ea218074d5ab7a36,
         type: 3}
       propertyPath: m_Name
@@ -9902,7 +9892,7 @@ PrefabInstance:
     - target: {fileID: 5534099699318042564, guid: c039f42a070652d4ca97d98ffc2271da,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.99
+      value: 3.12
       objectReference: {fileID: 0}
     - target: {fileID: 5534099699318042564, guid: c039f42a070652d4ca97d98ffc2271da,
         type: 3}
@@ -9912,7 +9902,7 @@ PrefabInstance:
     - target: {fileID: 5534099699318042564, guid: c039f42a070652d4ca97d98ffc2271da,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.28
+      value: -3.6
       objectReference: {fileID: 0}
     - target: {fileID: 5534099699318042564, guid: c039f42a070652d4ca97d98ffc2271da,
         type: 3}
@@ -9977,7 +9967,7 @@ PrefabInstance:
     - target: {fileID: 2854022813525587603, guid: 6838534834fbf984299c63472c7db021,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.79
+      value: 2.92
       objectReference: {fileID: 0}
     - target: {fileID: 2854022813525587603, guid: 6838534834fbf984299c63472c7db021,
         type: 3}
@@ -9987,7 +9977,7 @@ PrefabInstance:
     - target: {fileID: 2854022813525587603, guid: 6838534834fbf984299c63472c7db021,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.41516018
+      value: 3.83
       objectReference: {fileID: 0}
     - target: {fileID: 2854022813525587603, guid: 6838534834fbf984299c63472c7db021,
         type: 3}
@@ -10047,7 +10037,7 @@ PrefabInstance:
     - target: {fileID: 5762551566780433634, guid: 5d0221918f4087f488c7a0dbd30c7cbb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.85
+      value: 2.65
       objectReference: {fileID: 0}
     - target: {fileID: 5762551566780433634, guid: 5d0221918f4087f488c7a0dbd30c7cbb,
         type: 3}
@@ -10057,7 +10047,7 @@ PrefabInstance:
     - target: {fileID: 5762551566780433634, guid: 5d0221918f4087f488c7a0dbd30c7cbb,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.83
+      value: -4.01
       objectReference: {fileID: 0}
     - target: {fileID: 5762551566780433634, guid: 5d0221918f4087f488c7a0dbd30c7cbb,
         type: 3}
@@ -10117,11 +10107,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Charging Station
-      objectReference: {fileID: 0}
-    - target: {fileID: 8635760459673175673, guid: cc2a575c8faa66643a72452fc83aeabd,
-        type: 3}
-      propertyPath: placeDownSound
-      value: event:/SFX/Charging
       objectReference: {fileID: 0}
     - target: {fileID: 8635760459673175679, guid: cc2a575c8faa66643a72452fc83aeabd,
         type: 3}

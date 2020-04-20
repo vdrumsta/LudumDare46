@@ -350,15 +350,15 @@ MonoBehaviour:
   - statName: 1
     value: 100
     reducePerSecond: 1
-    maxValueSatisfaction: 90
+    maxValueSatisfaction: 70
   - statName: 2
     value: 100
     reducePerSecond: 1
-    maxValueSatisfaction: 90
+    maxValueSatisfaction: 70
   - statName: 3
     value: 100
     reducePerSecond: 1
-    maxValueSatisfaction: 90
+    maxValueSatisfaction: 70
   statBars:
   - statName: 0
     slider: {fileID: 0}

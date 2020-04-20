@@ -131,7 +131,8 @@ MonoBehaviour:
   percentageFull: 0
   visualElement: {fileID: 0}
   interactionHitBox: {fileID: 5762551566544147035}
-  useSpeed: 0.1
+  useSpeed: 0.3
+  addSpeed: 0.15
   autoStart: 1
   fillBar: {fileID: 6190624547839897400}
   fillBarDistanceAboveItem: 0.5

@@ -26,6 +26,7 @@ public class UsableItem : PickableItem
     public GameObject visualElement;
     public UsableItemUseComponent interactionHitBox;
     public float useSpeed;
+    public float addSpeed;
     public bool autoStart;
     public LineRenderer fillBar;
     public float fillBarDistanceAboveItem = 0.5f;
@@ -170,7 +171,7 @@ public class UsableItem : PickableItem
             {
                 attackable.statFillValuesList.Clear();
                 attackable.statFillValuesList.Add(new StatTypeClass(StatType.Hunger, percentageFull, 0f));
-                attackable.statFillValuesList.Add(new StatTypeClass(StatType.Happiness, (percentageFull > 0.5f) ? 0.3f : -0.2f, 0f));
+                attackable.statFillValuesList.Add(new StatTypeClass(StatType.Happiness, (percentageFull > 0.2f) ? 0.3f : -0.1f, 0f));
             }
             attackable.RefreshAttackableObject();
         }

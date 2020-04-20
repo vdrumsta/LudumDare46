@@ -55,7 +55,7 @@ public class UsableItemUseComponent : MonoBehaviour
         do
         {
             yield return new WaitForSeconds(usableItem.useSpeed);
-            plant.AddStat(usableItem.statTypeForPlant, 1);
+            plant.AddStat(usableItem.statTypeForPlant, usableItem.addSpeed);
 
         } while (true);
     }
