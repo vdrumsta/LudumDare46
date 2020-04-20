@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{cce562ab-11e3-4fab-ba59-e08cfac18c56}">
+		<property name="assetPath">
+			<value>Cooking/food_cooking_burgers_on_bbq_sizzle - Trimmed.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.5</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a8c15fb0-e569-4025-b8f6-1af687724853}</destination>
+		</relationship>
+	</object>
+</objects>

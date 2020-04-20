@@ -5,7 +5,7 @@
 			<value>Burning</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{d36779d6-aa9a-4d57-a1cd-127773abb340}</destination>
@@ -130,7 +130,6 @@
 	<object class="MixerBusEffectChain" id="{dde6b271-58d3-49e3-b844-4f0fa0806f8e}">
 		<relationship name="effects">
 			<destination>{cdd5ea1f-1582-4a7c-beb7-0cad08662144}</destination>
-			<destination>{cfad1feb-3ae9-407c-929a-44ca527ca6bc}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{b87b24d9-53c5-4856-9ae5-eda0f2387b7f}" />
@@ -142,6 +141,5 @@
 	</object>
 	<object class="MixerBusPanner" id="{07bbdc20-51fe-4065-a0f1-44c3d94f6ca5}" />
 	<object class="MixerBusFader" id="{cdd5ea1f-1582-4a7c-beb7-0cad08662144}" />
-	<object class="SpatialiserEffect" id="{cfad1feb-3ae9-407c-929a-44ca527ca6bc}" />
 	<object class="MixerBusFader" id="{0bf34907-1ad0-45e7-a119-f7728807b14a}" />
 </objects>

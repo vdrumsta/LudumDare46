@@ -57,3 +57,4 @@
 
 # FMod
 *.bank filter=lfs diff=lfs merge=lfs -text
+*.fobj filter=lfs diff=lfs merge=lfs -text

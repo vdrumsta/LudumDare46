@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: event:/Plot/telephone
   guid: 3372339f87b04746a73c8ccf419a522d
   Banks:
-  - {fileID: -8968401643408014694}
+  - {fileID: 7625395404252897718}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -23,6 +23,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 17760
+--- !u!114 &-9019422966489568176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Plugins/FMOD/LD46/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637230126928838616
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-8968401643408014694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,6 +76,64 @@ MonoBehaviour:
   Max: 3
   Default: 0
   Exists: 0
+--- !u!114 &-8657761901313623984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Objects/BoomBox IN ST
+  m_EditorClassIdentifier: 
+  Path: event:/Objects/BoomBox IN ST
+  guid: 751dd1f3bcd54c4ea22263d1f39a4d84
+  Banks:
+  - {fileID: 7625395404252897718}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 297960
+--- !u!114 &-8617211708715850154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Eating/Size
+  m_EditorClassIdentifier: 
+  Name: Size
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
+--- !u!114 &-8589831646988486814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Plugins/FMOD/LD46/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637230137311559204
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-8422195699792492808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,14 +149,31 @@ MonoBehaviour:
   Path: event:/Plant/Burning
   guid: 5ea2da502f25564ab7813334930c5980
   Banks:
-  - {fileID: -8968401643408014694}
+  - {fileID: 7625395404252897718}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 0
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 0
+  MaxDistance: 0
   Length: 8004
+--- !u!114 &-7815261006819488136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Happiness Low/Size
+  m_EditorClassIdentifier: 
+  Name: Size
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
 --- !u!114 &-7748555151680602375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,6 +210,41 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-7521786889912933778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Plugins/FMOD/LD46/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637230152073044012
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-7461924476141056696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Food low/Size
+  m_EditorClassIdentifier: 
+  Name: Size
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
 --- !u!114 &-7247935183704894508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,7 +329,7 @@ MonoBehaviour:
   Path: event:/Objects/Falling
   guid: ec8031ee98386440a8ee2da41c2f77db
   Banks:
-  - {fileID: -8968401643408014694}
+  - {fileID: 7625395404252897718}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -209,6 +337,23 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 718
+--- !u!114 &-6491073124401606790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Eating/Size
+  m_EditorClassIdentifier: 
+  Name: Size
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
 --- !u!114 &-6469782853672611956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,12 +369,104 @@ MonoBehaviour:
   Path: event:/Plant/Eating
   guid: 2aed8a8d52795b489a7b1a4859d3e2dc
   Banks:
-  - {fileID: -8968401643408014694}
+  - {fileID: 7625395404252897718}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: -4072987834015623517}
+  - {fileID: 7451604219668872134}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-5368074874230990098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Food low/Size
+  m_EditorClassIdentifier: 
+  Name: Size
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
+--- !u!114 &-5346365333205636313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Eating/Size
+  m_EditorClassIdentifier: 
+  Name: Size
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
+--- !u!114 &-5155004821049914813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Happiness Low/Size
+  m_EditorClassIdentifier: 
+  Name: Size
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
+--- !u!114 &-5004138423160227418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Plugins/FMOD/LD46/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637230137763511494
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-4884682957722945491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/BoomBoxxON
+  m_EditorClassIdentifier: 
+  Path: snapshot:/BoomBoxxON
+  guid: 5111a1b2771e96458892e641db5ff764
+  Banks:
+  - {fileID: 7625395404252897718}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -265,12 +502,12 @@ MonoBehaviour:
   Path: event:/Plant/Happiness Low
   guid: c2eb478854f7b04b92f22c81655d25e8
   Banks:
-  - {fileID: -8968401643408014694}
+  - {fileID: 7625395404252897718}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 4569655952152945960}
+  - {fileID: 5552894307105453086}
   MinDistance: 1
   MaxDistance: 20
   Length: 4544
@@ -343,6 +580,29 @@ MonoBehaviour:
   Max: 3
   Default: 0
   Exists: 0
+--- !u!114 &-3995525392739695691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Soundtrack And Ambiences/Soundtrack
+  m_EditorClassIdentifier: 
+  Path: event:/Soundtrack And Ambiences/Soundtrack
+  guid: f1d79daadb44f64c9f3eeabfcb4fcfc9
+  Banks:
+  - {fileID: 7625395404252897718}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 180937
 --- !u!114 &-3494840537400902985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,7 +618,7 @@ MonoBehaviour:
   Path: event:/Plant/Eating Mid
   guid: 4a9346a4155df249a147d92fa0d69cab
   Banks:
-  - {fileID: -8968401643408014694}
+  - {fileID: 7625395404252897718}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -398,7 +658,7 @@ MonoBehaviour:
   Path: event:/Soundtrack And Ambiences/Ambience
   guid: 3cadb57ade88e64eaea6ab531c45e229
   Banks:
-  - {fileID: -8968401643408014694}
+  - {fileID: 7625395404252897718}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -423,6 +683,23 @@ MonoBehaviour:
   Max: 3
   Default: 0
   Exists: 0
+--- !u!114 &-2157218616017730620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Food low/Size
+  m_EditorClassIdentifier: 
+  Name: Size
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 1
 --- !u!114 &-2013200320078156678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -438,7 +715,7 @@ MonoBehaviour:
   Path: event:/Character/Bitted
   guid: 814cd79c1928bd4cbbe290b02e4b90ca
   Banks:
-  - {fileID: -8968401643408014694}
+  - {fileID: 7625395404252897718}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -446,6 +723,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1000
+--- !u!114 &-1616244172687421958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Actions/PlaceFood
+  m_EditorClassIdentifier: 
+  Path: event:/Actions/PlaceFood
+  guid: 81e93cc03ca9ac4781558681b47c47f2
+  Banks:
+  - {fileID: 7625395404252897718}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1700
 --- !u!114 &-1590421767616950589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -463,6 +763,58 @@ MonoBehaviour:
   Max: 3
   Default: 0
   Exists: 1
+--- !u!114 &-1542246813375395660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Food low/Size
+  m_EditorClassIdentifier: 
+  Name: Size
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
+--- !u!114 &-1532475427556320589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Eating/Size
+  m_EditorClassIdentifier: 
+  Name: Size
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
+--- !u!114 &-1481536381181800488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Plugins/FMOD/LD46/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637230124686788156
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-1097192118531533581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -495,14 +847,14 @@ MonoBehaviour:
   Path: event:/Objects/Water can fill
   guid: 29a08c1c55c4b14e8a8f4bfb83693942
   Banks:
-  - {fileID: -8968401643408014694}
+  - {fileID: 7625395404252897718}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 4906
+  Length: 7256
 --- !u!114 &-573637501530866077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -518,7 +870,7 @@ MonoBehaviour:
   Path: event:/Plant/Eating Small
   guid: 14788d44877f4e4488c996ba9af93f9d
   Banks:
-  - {fileID: -8968401643408014694}
+  - {fileID: 7625395404252897718}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -544,6 +896,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-29700297521267132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Plugins/FMOD/LD46/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637230135980376883
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -558,7 +928,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 7363133539049551210}
-  - {fileID: -8968401643408014694}
+  - {fileID: 7625395404252897718}
   EditorEvents:
   - {fileID: -573637501530866077}
   - {fileID: 6567634367667761704}
@@ -587,12 +957,16 @@ MonoBehaviour:
   - {fileID: 2463048991018435255}
   - {fileID: 6245087711013047832}
   - {fileID: 8384057930325116056}
+  - {fileID: -4884682957722945491}
+  - {fileID: -1616244172687421958}
+  - {fileID: -3995525392739695691}
+  - {fileID: -8657761901313623984}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -8968401643408014694}
+  - {fileID: 7625395404252897718}
   StringsBanks:
   - {fileID: 7363133539049551210}
-  stringsBankWriteTime: 637230123615853203
+  stringsBankWriteTime: 637230155093168984
   cacheVersion: 3
 --- !u!114 &100069445882710566
 MonoBehaviour:
@@ -609,7 +983,7 @@ MonoBehaviour:
   Path: event:/Objects/Sink
   guid: 77c891dff5eb4040853ec359aab2be37
   Banks:
-  - {fileID: -8968401643408014694}
+  - {fileID: 7625395404252897718}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -617,6 +991,23 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 250
+--- !u!114 &143740275228381610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Happiness Low/Size
+  m_EditorClassIdentifier: 
+  Name: Size
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
 --- !u!114 &186106881465086722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -649,7 +1040,7 @@ MonoBehaviour:
   Path: event:/Plant/Light full
   guid: 6b07f1b84809dc4ea0d41fa8253a1991
   Banks:
-  - {fileID: -8968401643408014694}
+  - {fileID: 7625395404252897718}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -707,7 +1098,7 @@ MonoBehaviour:
   Path: event:/Character/Footsteps
   guid: eb486ec2ade3f9498eab2f4014826b9e
   Banks:
-  - {fileID: -8968401643408014694}
+  - {fileID: 7625395404252897718}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -732,6 +1123,23 @@ MonoBehaviour:
   Max: 3
   Default: 0
   Exists: 1
+--- !u!114 &909252618228110895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Eating/Size
+  m_EditorClassIdentifier: 
+  Name: Size
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
 --- !u!114 &933377428524123318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -765,7 +1173,7 @@ MonoBehaviour:
   Path: event:/Character/Trow
   guid: 6da0faefb4714e429386002eda112e3b
   Banks:
-  - {fileID: -8968401643408014694}
+  - {fileID: 7625395404252897718}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -790,6 +1198,23 @@ MonoBehaviour:
   Max: 3
   Default: 0
   Exists: 1
+--- !u!114 &1706619558844411501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Eating/Size
+  m_EditorClassIdentifier: 
+  Name: Size
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
 --- !u!114 &2283192620740074113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -822,16 +1247,33 @@ MonoBehaviour:
   Path: event:/Plant/Food low
   guid: ef7c355117583a478b467fc2e2bc48e0
   Banks:
-  - {fileID: -8968401643408014694}
+  - {fileID: 7625395404252897718}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 3493699791899113836}
+  - {fileID: -2157218616017730620}
   MinDistance: 1
   MaxDistance: 20
   Length: 4500
 --- !u!114 &2557342806420875283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Food low/Size
+  m_EditorClassIdentifier: 
+  Name: Size
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
+--- !u!114 &3175269718346526251
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -863,7 +1305,7 @@ MonoBehaviour:
   Path: event:/Objects/Water can emplty
   guid: 1802685ed4ff4749a6aec5bbd340a1f9
   Banks:
-  - {fileID: -8968401643408014694}
+  - {fileID: 7625395404252897718}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -955,7 +1397,7 @@ MonoBehaviour:
   Path: event:/Actions/Cooking
   guid: 5b2083c4a9f2b64ab852a9b53ecadf46
   Banks:
-  - {fileID: -8968401643408014694}
+  - {fileID: 7625395404252897718}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -963,6 +1405,41 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 9950
+--- !u!114 &4093217806476998881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Food low/Size
+  m_EditorClassIdentifier: 
+  Name: Size
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
+--- !u!114 &4404492180723838636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Plugins/FMOD/LD46/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637230135805225530
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &4426872591968519032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1014,6 +1491,23 @@ MonoBehaviour:
   Max: 3
   Default: 0
   Exists: 1
+--- !u!114 &5148569463451152386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Food low/Size
+  m_EditorClassIdentifier: 
+  Name: Size
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
 --- !u!114 &5416121615591451541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1025,6 +1519,40 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Happiness Low/Size
+  m_EditorClassIdentifier: 
+  Name: Size
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
+--- !u!114 &5552894307105453086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Happiness Low/Size
+  m_EditorClassIdentifier: 
+  Name: Size
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 1
+--- !u!114 &5888999194653349551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Eating/Size
   m_EditorClassIdentifier: 
   Name: Size
   Min: 0
@@ -1046,7 +1574,7 @@ MonoBehaviour:
   Path: event:/Character/Death
   guid: 3ac68cb8de51594ba0ddbc7cdeb4597f
   Banks:
-  - {fileID: -8968401643408014694}
+  - {fileID: 7625395404252897718}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1069,7 +1597,7 @@ MonoBehaviour:
   Path: event:/Character/PickUp
   guid: f1bdd71edd892d4192fac90a7d3447aa
   Banks:
-  - {fileID: -8968401643408014694}
+  - {fileID: 7625395404252897718}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1092,7 +1620,7 @@ MonoBehaviour:
   Path: event:/Objects/UV lamp
   guid: 39c71515de61184b8bbab14799e81bf1
   Banks:
-  - {fileID: -8968401643408014694}
+  - {fileID: 7625395404252897718}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -1149,7 +1677,7 @@ MonoBehaviour:
   Path: event:/Actions/Burning Food
   guid: 1677a2611f5b96428852b682127926c3
   Banks:
-  - {fileID: -8968401643408014694}
+  - {fileID: 7625395404252897718}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -1172,7 +1700,7 @@ MonoBehaviour:
   Path: event:/SFX/Charging complete
   guid: 4dc7df77afba5a4e8e858c8dcbcce630
   Banks:
-  - {fileID: -8968401643408014694}
+  - {fileID: 7625395404252897718}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -1195,14 +1723,14 @@ MonoBehaviour:
   Path: event:/Plant/Move
   guid: 2f3065740bbf5745baf762e6a56e4334
   Banks:
-  - {fileID: -8968401643408014694}
+  - {fileID: 7625395404252897718}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2375
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2250
 --- !u!114 &6723729747120737991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1252,7 +1780,7 @@ MonoBehaviour:
   Path: event:/Plant/Light burn
   guid: 1ad50ffd0160da43908925ea6bd7203b
   Banks:
-  - {fileID: -8968401643408014694}
+  - {fileID: 7625395404252897718}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -1309,12 +1837,64 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/Plugins/FMOD/LD46/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637230123615853203
+  lastModified: 637230155093168984
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1986
+    Value: 2214
   Exists: 1
+--- !u!114 &7451604219668872134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Eating/Size
+  m_EditorClassIdentifier: 
+  Name: Size
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 1
+--- !u!114 &7625395404252897718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Plugins/FMOD/LD46/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637230155093048955
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &8091466764765491351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Happiness Low/Size
+  m_EditorClassIdentifier: 
+  Name: Size
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
 --- !u!114 &8384057930325116056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1330,7 +1910,7 @@ MonoBehaviour:
   Path: event:/Plant/Eating Big
   guid: f5db31d2ff09f44882b36a725b66f0ab
   Banks:
-  - {fileID: -8968401643408014694}
+  - {fileID: 7625395404252897718}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1338,6 +1918,23 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 4716
+--- !u!114 &8567065510071004812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Happiness Low/Size
+  m_EditorClassIdentifier: 
+  Name: Size
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
 --- !u!114 &8580478305836338092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1353,7 +1950,7 @@ MonoBehaviour:
   Path: event:/SFX/Charging remove
   guid: 83fa53489265264583756502b271ba41
   Banks:
-  - {fileID: -8968401643408014694}
+  - {fileID: 7625395404252897718}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1376,7 +1973,7 @@ MonoBehaviour:
   Path: event:/SFX/Charging
   guid: 8a3f4243a2dc6746aba97555a6f6a7c9
   Banks:
-  - {fileID: -8968401643408014694}
+  - {fileID: 7625395404252897718}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -1384,3 +1981,54 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 10837
+--- !u!114 &8881246639021894024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Food low/Size
+  m_EditorClassIdentifier: 
+  Name: Size
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
+--- !u!114 &8940765351132990911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Happiness Low/Size
+  m_EditorClassIdentifier: 
+  Name: Size
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
+--- !u!114 &9005469842035800960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Happiness Low/Size
+  m_EditorClassIdentifier: 
+  Name: Size
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
