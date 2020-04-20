@@ -90,7 +90,7 @@ Transform:
   m_GameObject: {fileID: 8321528491089809516}
   m_LocalRotation: {x: 0.0040660016, y: 0.0028507381, z: 0.0028419956, w: 0.99998367}
   m_LocalPosition: {x: 0.0036332568, y: 0.00344491, z: -0.008655161}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8321528491739478066}
   m_Father: {fileID: 0}
@@ -279,7 +279,8 @@ MonoBehaviour:
       m_NumAlphaKeys: 2
     fill: {fileID: 0}
     sliderValue: 0
-  eatRadius: 2
+  growScript: {fileID: 0}
+  eatRadius: 2.25
   rotateScript: {fileID: 8321528491089809517}
   angleOfAttack: 5
   spitPoint: {fileID: 1407675202849908483}
@@ -355,6 +356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxGrowSize: 2
   gameController: {fileID: 0}
+  newGrowScale: 0
 --- !u!1 &8321528491739478065
 GameObject:
   m_ObjectHideFlags: 0

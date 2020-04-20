@@ -8,6 +8,7 @@ public class PlantGrow : MonoBehaviour
 {
     public float maxGrowSize = 3f;
     public GameController gameController;
+    [HideInInspector] public float newGrowScale;
     private float roundTime = 180f;
     private Stopwatch stopwatch;
     private float startingGrowScale;
@@ -30,7 +31,7 @@ public class PlantGrow : MonoBehaviour
     {
         float growRatio = (float) stopwatch.Elapsed.TotalSeconds / roundTime;
         float sizeGrowExtra = Mathf.Lerp(0, maxGrowExtra, growRatio);
-        float newGrowScale = startingGrowScale + sizeGrowExtra;
+        newGrowScale = startingGrowScale + sizeGrowExtra;
         Debug.Log("newGrowScale = " + newGrowScale + "; time = " + stopwatch.Elapsed.TotalSeconds);
         var newGrowScaleVector = new Vector3(newGrowScale, newGrowScale, newGrowScale);
         transform.localScale = newGrowScaleVector;

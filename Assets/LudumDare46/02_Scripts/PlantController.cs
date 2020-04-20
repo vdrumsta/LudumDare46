@@ -84,7 +84,9 @@ public class PlantController : MonoBehaviour
     public Dictionary<StatType, float> stats = new Dictionary<StatType, float>();
     public List<StatSliderClass> statBars = new List<StatSliderClass>();
 
+    public PlantGrow growScript;
     public float eatRadius;
+    private float startingEatRadius;
     public PlantRotate rotateScript;
     public float angleOfAttack = 5f;
     private List<GameObject> swallowedItems = new List<GameObject>();
@@ -112,6 +114,8 @@ public class PlantController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        startingEatRadius = eatRadius;
+
         // Populate stats dictionary
         foreach (var stat in statsList)
         {
@@ -142,6 +146,16 @@ public class PlantController : MonoBehaviour
             {
                 stats[StatType.Hunger] -= 20;
             }
+
+            GrowEatRadius();
+        }
+    }
+
+    private void GrowEatRadius()
+    {
+        if (growScript)
+        {
+            eatRadius = startingEatRadius * growScript.newGrowScale;
         }
     }
 
