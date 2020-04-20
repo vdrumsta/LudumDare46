@@ -58,7 +58,7 @@ public class PlayerArms : MonoBehaviour
                 ItemInHand = spawnableSurfaceAvailable.GetObjectFromSurface();
                 if (itemInHand)// check to see if we got an item
                 {
-                    itemInHand.PlaceItemAtLocation(transform);
+                    itemInHand.PlaceItemAtLocation(itemLocation);
                 }
             }
             else if (itemInHand)// drop item
