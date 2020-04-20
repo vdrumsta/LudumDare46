@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     private PlayerArms arms;
     private PlayerHealth health;
     private Animator characterAnimator;
+    private bool isDead;
 
     private int isWalking_hash = Animator.StringToHash("IsWalking");
     private int pickUp_hash = Animator.StringToHash("PickUp");
@@ -38,29 +39,32 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        Vector3 moveVector = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        if (!isDead)
+        {
+            Vector3 moveVector = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
 
-        if (feet.IsGrounded)
-        {
-            moveVector.y = 0;
-        }
-        else
-        {
-            velocityVector.y += Physics.gravity.y * Time.deltaTime;
-        }
+            if (feet.IsGrounded)
+            {
+                moveVector.y = 0;
+            }
+            else
+            {
+                velocityVector.y += Physics.gravity.y * Time.deltaTime;
+            }
 
-        controller.Move(moveVector * Time.deltaTime * movementSpeed);
-        controller.Move(velocityVector * Time.deltaTime);
+            controller.Move(moveVector * Time.deltaTime * movementSpeed);
+            controller.Move(velocityVector * Time.deltaTime);
 
-        if (moveVector != Vector3.zero)
-        {
-            isWalkingAnimation = true;
-            transform.forward = moveVector;
-        }
-        else if(isWalkingAnimation)
-        {
-            isWalkingAnimation = false;
+            if (moveVector != Vector3.zero)
+            {
+                isWalkingAnimation = true;
+                transform.forward = moveVector;
+            }
+            else if (isWalkingAnimation)
+            {
+                isWalkingAnimation = false;
+            }
         }
     }
 
@@ -76,6 +80,7 @@ public class Player : MonoBehaviour
 
     public void AnimationDie()
     {
+        isDead = true;
         dieAnimation = true;
     }
 }
