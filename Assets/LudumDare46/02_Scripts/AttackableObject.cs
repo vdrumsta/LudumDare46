@@ -51,7 +51,6 @@ public class AttackableObject : MonoBehaviour, IObservable<PlantController>
         // Check if other object layer is part of damage object layer mask
         if (damageObjectLayerMask == (damageObjectLayerMask | (1 << other.gameObject.layer)))
         {
-            
             var rootObject = other.gameObject.GetComponent<ColliderRootReference>().root;
             var plantController = rootObject.GetComponent<PlantController>();
 

@@ -264,7 +264,6 @@ public class PlantController : MonoBehaviour
 
         // Order unsatisfied stats based on which one is the lowest
         unsatisfiedStats = unsatisfiedStats.OrderBy(t => t.value).ToList();
-        Debug.Log("unsatisfiedStats.Count = " + unsatisfiedStats.Count);
 
         AttackableObject mostValueableObject = null;
         float highestStatValue = 0;
