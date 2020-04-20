@@ -46,6 +46,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   root: {fileID: 8321528491089809516}
+--- !u!114 &375438944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3171033012219706154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc51a8df29d9c54680670575c81e894, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3646283422835804792
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,6 +166,7 @@ GameObject:
   - component: {fileID: 8321528491089809517}
   - component: {fileID: 1232922058713971838}
   - component: {fileID: 4487428669739118120}
+  - component: {fileID: 1895971264}
   m_Layer: 0
   m_Name: Plant
   m_TagString: Untagged
@@ -218,15 +231,15 @@ MonoBehaviour:
   - statName: 1
     value: 100
     reducePerSecond: 1
-    maxValueSatisfaction: 50
+    maxValueSatisfaction: 90
   - statName: 2
     value: 100
     reducePerSecond: 1
-    maxValueSatisfaction: 50
+    maxValueSatisfaction: 90
   - statName: 3
     value: 100
     reducePerSecond: 1
-    maxValueSatisfaction: 50
+    maxValueSatisfaction: 90
   statBars:
   - statName: 0
     slider: {fileID: 0}
@@ -410,6 +423,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2.3939426, z: 1}
   m_Center: {x: -2.6958205e-10, y: 1.1954379, z: -0.00000000135302}
+--- !u!114 &1895971264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8321528491089809516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc51a8df29d9c54680670575c81e894, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8321528491739478065
 GameObject:
   m_ObjectHideFlags: 0
