@@ -32,7 +32,7 @@ public class PlantGrow : MonoBehaviour
         float growRatio = (float) stopwatch.Elapsed.TotalSeconds / roundTime;
         float sizeGrowExtra = Mathf.Lerp(0, maxGrowExtra, growRatio);
         newGrowScale = startingGrowScale + sizeGrowExtra;
-        Debug.Log("newGrowScale = " + newGrowScale + "; time = " + stopwatch.Elapsed.TotalSeconds);
+        
         var newGrowScaleVector = new Vector3(newGrowScale, newGrowScale, newGrowScale);
         transform.localScale = newGrowScaleVector;
     }
