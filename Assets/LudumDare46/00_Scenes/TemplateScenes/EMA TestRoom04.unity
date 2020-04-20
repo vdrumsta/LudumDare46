@@ -1728,6 +1728,80 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5549f18c6be38eb42a646d08d99cfde7, type: 3}
+--- !u!1001 &391104608
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1956771267351986718, guid: 8e36f0587a794844f8fd55a95e1d9e1a,
+        type: 3}
+      propertyPath: Event
+      value: event:/Soundtrack And Ambiences/Soundtrack
+      objectReference: {fileID: 0}
+    - target: {fileID: 5819373874032842589, guid: 8e36f0587a794844f8fd55a95e1d9e1a,
+        type: 3}
+      propertyPath: m_Name
+      value: Audio Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6656395665479005070, guid: 8e36f0587a794844f8fd55a95e1d9e1a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6656395665479005070, guid: 8e36f0587a794844f8fd55a95e1d9e1a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6656395665479005070, guid: 8e36f0587a794844f8fd55a95e1d9e1a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6656395665479005070, guid: 8e36f0587a794844f8fd55a95e1d9e1a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6656395665479005070, guid: 8e36f0587a794844f8fd55a95e1d9e1a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6656395665479005070, guid: 8e36f0587a794844f8fd55a95e1d9e1a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6656395665479005070, guid: 8e36f0587a794844f8fd55a95e1d9e1a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6656395665479005070, guid: 8e36f0587a794844f8fd55a95e1d9e1a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6656395665479005070, guid: 8e36f0587a794844f8fd55a95e1d9e1a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6656395665479005070, guid: 8e36f0587a794844f8fd55a95e1d9e1a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6656395665479005070, guid: 8e36f0587a794844f8fd55a95e1d9e1a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8e36f0587a794844f8fd55a95e1d9e1a, type: 3}
 --- !u!4 &397039451 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 422100091711252043, guid: 5549f18c6be38eb42a646d08d99cfde7,
@@ -5338,6 +5412,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1336168275}
     m_Modifications:
+    - target: {fileID: 1941648110114704682, guid: 0ac280496aa83eb42a5d7e4bc54dcbcd,
+        type: 3}
+      propertyPath: placeDownSound
+      value: event:/Actions/Cooking
+      objectReference: {fileID: 0}
     - target: {fileID: 1941648110114704683, guid: 0ac280496aa83eb42a5d7e4bc54dcbcd,
         type: 3}
       propertyPath: m_Name
@@ -9190,6 +9269,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1336168275}
     m_Modifications:
+    - target: {fileID: 2358662829029717746, guid: c8bb58427470bc54ea218074d5ab7a36,
+        type: 3}
+      propertyPath: placeDownSound
+      value: event:/Objects/Water can fill
+      objectReference: {fileID: 0}
     - target: {fileID: 2358662829029717747, guid: c8bb58427470bc54ea218074d5ab7a36,
         type: 3}
       propertyPath: m_Name
@@ -10702,6 +10786,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Charging Station
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635760459673175673, guid: cc2a575c8faa66643a72452fc83aeabd,
+        type: 3}
+      propertyPath: placeDownSound
+      value: event:/SFX/Charging
       objectReference: {fileID: 0}
     - target: {fileID: 8635760459673175679, guid: cc2a575c8faa66643a72452fc83aeabd,
         type: 3}

@@ -8285,6 +8285,29 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 335016435}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1844862714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844862710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Character/Bitted
+  PlayEvent: 12
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!4 &1852981939 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5282410800996426103, guid: 2f102cd2519aeea47bbebc3a3e1e797a,
@@ -8441,6 +8464,29 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 335016435}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1876664978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876664974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Character/Bitted
+  PlayEvent: 12
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1001 &1897002258
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8984,6 +9030,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1336168275}
     m_Modifications:
+    - target: {fileID: 2358662829029717746, guid: c8bb58427470bc54ea218074d5ab7a36,
+        type: 3}
+      propertyPath: placeDownSound
+      value: event:/Objects/Water can fill
+      objectReference: {fileID: 0}
     - target: {fileID: 2358662829029717747, guid: c8bb58427470bc54ea218074d5ab7a36,
         type: 3}
       propertyPath: m_Name
@@ -9727,6 +9778,29 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 335016435}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2086367124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086367120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Character/Bitted
+  PlayEvent: 12
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!4 &2126585036 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 422100091711252043, guid: 5549f18c6be38eb42a646d08d99cfde7,
@@ -10113,6 +10187,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Charging Station
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635760459673175673, guid: cc2a575c8faa66643a72452fc83aeabd,
+        type: 3}
+      propertyPath: placeDownSound
+      value: event:/SFX/Charging
       objectReference: {fileID: 0}
     - target: {fileID: 8635760459673175679, guid: cc2a575c8faa66643a72452fc83aeabd,
         type: 3}
