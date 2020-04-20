@@ -70,8 +70,9 @@ public class UsableItem : PickableItem
             fillBar.SetPosition(1, fillBarNewEndPoint);
 
             // Keep the item above the usable item
-            var newPos = fillBarLocalStartingPos;
+            var newPos = transform.position;
             newPos.y = transform.position.y + fillBarDistanceAboveItem;
+            //newPos.y = transform.position.y + fillBarDistanceAboveItem;
             fillBar.transform.position = newPos;
 
             // Set rotation to always be the same
