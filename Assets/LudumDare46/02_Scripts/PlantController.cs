@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using System.Linq;
 
 [Serializable]
 public enum StatType
@@ -218,37 +219,6 @@ public class PlantController : MonoBehaviour
         }
     }
 
-    public StatType GetLowestStat()
-    {
-        // Default is hunger
-        StatType minStatKey = StatType.Hunger;
-        float minStatValue = float.MaxValue;
-
-        foreach(var stat in stats)
-        {
-            if (stat.Value < minStatValue && stat.Value < GetStatMinSatisfied(stat.Key))
-            {
-                minStatKey = stat.Key;
-                minStatValue = stat.Value;
-            }
-        }
-
-        return (StatType) minStatKey;
-    }
-
-    private float GetStatMinSatisfied(StatType statType)
-    {
-        foreach(var stat in statsList)
-        {
-            if (stat.statName == statType)
-            {
-                return stat.maxValueSatisfaction;
-            }
-        }
-
-        return 100;
-    }
-
     public float GetStat(StatType statType)
     {
         return stats[statType];
@@ -273,38 +243,62 @@ public class PlantController : MonoBehaviour
         // Retrieve all components in the area that represent eatable objects
         var attackableObjects = FindObjectsOfType<AttackableObject>();
         List<AttackableObject> attackableObjectsInRange = new List<AttackableObject>();
+
+        // Check which components are in range
         foreach (var attackableObject in attackableObjects)
         {
             if (!(attackableObject.isAttackable)) continue;
 
-            var levelPosition = attackableObject.transform.position;
-            levelPosition.y = transform.position.y;
+            var targetPos = attackableObject.transform.position;
 
-            if (Vector3.Distance(levelPosition, transform.position) < eatRadius)
+            if (Vector3.Distance(targetPos, transform.position) < eatRadius)
             {
                 attackableObjectsInRange.Add(attackableObject);
             }
         }
-        
+
         if (attackableObjectsInRange.Count <= 0) return null;
 
-        // Based on which stat is the lowest stat for the plant, 
-        // target the one that gives the most in that stat
-        StatType lowestStatType = GetLowestStat();
+        // Get a list of all unsatisfied stats
+        List<StatTypeClass> unsatisfiedStats = GetUnsatisfiedStats();
+
+        // Order unsatisfied stats based on which one is the lowest
+        unsatisfiedStats = unsatisfiedStats.OrderBy(t => t.value).ToList();
+        Debug.Log("unsatisfiedStats.Count = " + unsatisfiedStats.Count);
+
         AttackableObject mostValueableObject = null;
         float highestStatValue = 0;
 
-        for (int i = 0; i < attackableObjectsInRange.Count; i++)
+        // Based on the order of the lowest stats, look for item which provides
+        // most of that stat
+        foreach (var stat in unsatisfiedStats)
         {
-            var currentObjectStatValue = attackableObjectsInRange[i].GetStatFillValue(lowestStatType);
-            if(currentObjectStatValue > highestStatValue)
+            foreach (var objInRange in attackableObjectsInRange)
             {
-                mostValueableObject = attackableObjectsInRange[i];
-                highestStatValue = currentObjectStatValue;
+                if (objInRange.statFillValues.ContainsKey(stat.statName) 
+                    && objInRange.statFillValues[stat.statName] < highestStatValue)
+                {
+                    mostValueableObject = objInRange;
+                    highestStatValue = objInRange.statFillValues[stat.statName];
+                }
             }
         }
 
         return mostValueableObject;
+    }
+
+    private List<StatTypeClass> GetUnsatisfiedStats()
+    {
+        List<StatTypeClass> unsatisfiedStats = new List<StatTypeClass>();
+        foreach(var stat in statsList)
+        {
+            if (!IsStatSatisfied(stat.statName))
+            {
+                unsatisfiedStats.Add(stat);
+            }
+        }
+
+        return unsatisfiedStats;
     }
 
     private bool targetWithinAttackAngle(AttackableObject target)
