@@ -3643,6 +3643,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d4648f8bf7a1894983ca9baf415ee56, type: 3}
+--- !u!1001 &1075625443
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3776540072257849176, guid: 0944d8a6bd01bb14bb91e442a922ee0d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 32.581745
+      objectReference: {fileID: 0}
+    - target: {fileID: 3776540072257849176, guid: 0944d8a6bd01bb14bb91e442a922ee0d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 21.027725
+      objectReference: {fileID: 0}
+    - target: {fileID: 3776540072257849176, guid: 0944d8a6bd01bb14bb91e442a922ee0d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 25.90741
+      objectReference: {fileID: 0}
+    - target: {fileID: 3776540072257849176, guid: 0944d8a6bd01bb14bb91e442a922ee0d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3776540072257849176, guid: 0944d8a6bd01bb14bb91e442a922ee0d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3776540072257849176, guid: 0944d8a6bd01bb14bb91e442a922ee0d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3776540072257849176, guid: 0944d8a6bd01bb14bb91e442a922ee0d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3776540072257849176, guid: 0944d8a6bd01bb14bb91e442a922ee0d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3776540072257849176, guid: 0944d8a6bd01bb14bb91e442a922ee0d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3776540072257849176, guid: 0944d8a6bd01bb14bb91e442a922ee0d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3776540072257849176, guid: 0944d8a6bd01bb14bb91e442a922ee0d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3899381773007176693, guid: 0944d8a6bd01bb14bb91e442a922ee0d,
+        type: 3}
+      propertyPath: m_Name
+      value: SoundBackground
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0944d8a6bd01bb14bb91e442a922ee0d, type: 3}
 --- !u!1001 &1102329039
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5867,6 +5936,7 @@ MonoBehaviour:
   - statName: 2
     value: 20
     reducePerSecond: 0
+    maxValueSatisfaction: 0
   destroyUponAttack: 0
   damageObjectLayerMask:
     serializedVersion: 2
@@ -6253,6 +6323,29 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 335016435}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1844862714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844862710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Character/Bitted
+  PlayEvent: 12
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!4 &1847227189 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 17aaffeea4c2d5647a50eaff4368c4eb,
@@ -6409,6 +6502,29 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 335016435}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1876664978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876664974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Character/Bitted
+  PlayEvent: 12
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1001 &1887633572
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6957,6 +7073,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1271752389}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2041321987 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9182177877245493586, guid: 351ce48191a962c4ca93644d27beb07b,
+    type: 3}
+  m_PrefabInstance: {fileID: 472036948}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2041321995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041321987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: -1
 --- !u!4 &2049818931 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 17aaffeea4c2d5647a50eaff4368c4eb,
@@ -6975,6 +7110,29 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 335016435}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2086367124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086367120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Character/Bitted
+  PlayEvent: 12
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!4 &2086701350 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 17aaffeea4c2d5647a50eaff4368c4eb,
@@ -7456,8 +7614,8 @@ MonoBehaviour:
   consumesItem: 0
   typeToConsume: 0
   itemToSpawn: {fileID: 0}
-  itemNeeded: {fileID: 0}
   numberNeeded: 0
+  textForConsumeables: {fileID: 0}
 --- !u!65 &2358662829491461214
 BoxCollider:
   m_ObjectHideFlags: 0
