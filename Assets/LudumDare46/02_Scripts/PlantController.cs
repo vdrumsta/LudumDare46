@@ -20,11 +20,17 @@ public class StatTypeClass
     [Range(0, 100)] public float value;
     public float reducePerSecond = 1f;
 
-    public StatTypeClass(StatType statName, float value, float reducePerSecond)
+    // When the value drop below this number, 
+    // the plants wants to eat items of this stat type
+    public float maxValueSatisfaction = 50f;
+
+    public StatTypeClass(StatType statName, float value, 
+        float reducePerSecond = 0f, float maxValueSatisfaction = 50f)
     {
         this.statName = statName;
         this.value = value;
         this.reducePerSecond = reducePerSecond;
+        this.maxValueSatisfaction = maxValueSatisfaction;
     }
 }
 
@@ -173,12 +179,13 @@ public class PlantController : MonoBehaviour
 
     public StatType GetLowestStat()
     {
-        StatType minStatKey = StatType.Happiness;
+        // Default is hunger
+        StatType minStatKey = StatType.Hunger;
         float minStatValue = float.MaxValue;
 
         foreach(var stat in stats)
         {
-            if (stat.Value < minStatValue)
+            if (stat.Value < minStatValue && stat.Value < GetStatMinSatisfied(stat.Key))
             {
                 minStatKey = stat.Key;
                 minStatValue = stat.Value;
@@ -186,6 +193,19 @@ public class PlantController : MonoBehaviour
         }
 
         return (StatType) minStatKey;
+    }
+
+    private float GetStatMinSatisfied(StatType statType)
+    {
+        foreach(var stat in statsList)
+        {
+            if (stat.statName == statType)
+            {
+                return stat.maxValueSatisfaction;
+            }
+        }
+
+        return 100;
     }
 
     public float GetStat(StatType statType)

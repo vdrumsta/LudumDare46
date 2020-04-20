@@ -213,15 +213,19 @@ MonoBehaviour:
   - statName: 0
     value: 100
     reducePerSecond: 1
+    maxValueSatisfaction: 99
   - statName: 1
     value: 100
     reducePerSecond: 1
+    maxValueSatisfaction: 50
   - statName: 2
     value: 100
     reducePerSecond: 1
+    maxValueSatisfaction: 50
   - statName: 3
     value: 100
     reducePerSecond: 1
+    maxValueSatisfaction: 50
   statBars:
   - statName: 0
     slider: {fileID: 0}
