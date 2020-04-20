@@ -5,7 +5,7 @@
 			<value>Cooking</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{45b7788d-bcad-4066-8feb-854ab740ad07}</destination>
@@ -182,7 +182,6 @@
 	<object class="MixerBusEffectChain" id="{e846bf72-3feb-49e6-8e00-acd99005fd89}">
 		<relationship name="effects">
 			<destination>{fa70b7d0-4f47-4dcb-aa53-877c41ab90f2}</destination>
-			<destination>{46dbd13e-0a06-45b8-8ccd-0d288324ca3f}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{21cb15ec-4c31-4877-9634-6904aad137b8}" />
@@ -248,7 +247,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{2794d935-fe9a-44f3-afd7-661539b07134}" />
 	<object class="MixerBusFader" id="{fa70b7d0-4f47-4dcb-aa53-877c41ab90f2}" />
-	<object class="SpatialiserEffect" id="{46dbd13e-0a06-45b8-8ccd-0d288324ca3f}" />
 	<object class="AutomationPoint" id="{aebfa365-4b4f-4a0b-95cd-6b77f4e5380d}">
 		<property name="position">
 			<value>0</value>
