@@ -5,7 +5,7 @@
 			<value>Water can emplty</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{80c2829d-2fe5-4f0a-8ab2-47719453fdee}</destination>
@@ -56,7 +56,11 @@
 			<destination>{7c2f8fe9-0349-4572-b365-0856cfcd1a34}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{a9431edb-e0e9-4173-ac46-76069f56cc23}" />
+	<object class="EventAutomatableProperties" id="{a9431edb-e0e9-4173-ac46-76069f56cc23}">
+		<property name="maxVoices">
+			<value>1</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{4ec23775-7ea8-4ff7-9ef2-417f2072f81b}" />
 	<object class="GroupTrack" id="{c7188288-fbb4-4d53-8c44-ed8c8c198a39}">
 		<relationship name="modules">
@@ -122,7 +126,6 @@
 	<object class="MixerBusEffectChain" id="{295e8f67-6018-4552-98d2-32817d292969}">
 		<relationship name="effects">
 			<destination>{5653bc55-2fc0-45f1-ac5f-6ce233e33b5a}</destination>
-			<destination>{d177f58b-7f57-4f07-8a9e-3c28c1b8df0d}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{81e5d7c6-e531-404f-b107-d0e0fe31c9b5}" />
@@ -166,7 +169,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{4f732a77-d84d-4f7b-8ae4-197582f4fe1b}" />
 	<object class="MixerBusFader" id="{5653bc55-2fc0-45f1-ac5f-6ce233e33b5a}" />
-	<object class="SpatialiserEffect" id="{d177f58b-7f57-4f07-8a9e-3c28c1b8df0d}" />
 	<object class="ThreeEQEffect" id="{8667d033-ff4d-4848-8add-6832e218faf1}">
 		<property name="highGain">
 			<value>-9</value>
