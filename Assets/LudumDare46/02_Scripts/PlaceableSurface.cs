@@ -35,7 +35,7 @@ public class PlaceableSurface : MonoBehaviour
         // FMOD
         if (placeDownSound.Length != 0)
         {
-            Debug.Log(gameObject.name + " attached sound = " + placeDownSound);
+            //Debug.Log(gameObject.name + " attached sound = " + placeDownSound);
             
             //FMODUnity.RuntimeManager.AttachInstanceToGameObject(soundEvent);
         }
@@ -69,9 +69,13 @@ public class PlaceableSurface : MonoBehaviour
             if (item.percentageFull != 100 && hasItemOnCoroutine == null)
             {
                 hasItemOnCoroutine = StartCoroutine(HasItemOnRoutine(item));
-                soundEvent = FMODUnity.RuntimeManager.CreateInstance(placeDownSound);
-                soundEvent.start();
-                Debug.Log("Playing put down sound");
+
+                if (placeDownSound.Length != 0)
+                {
+                    soundEvent = FMODUnity.RuntimeManager.CreateInstance(placeDownSound);
+                    soundEvent.start();
+                    Debug.Log("Playing put down sound");
+                }
             }
             else if (item.percentageFull == 100 && hasItemOnCoroutine != null)
             {

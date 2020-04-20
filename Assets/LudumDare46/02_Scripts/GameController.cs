@@ -6,10 +6,6 @@ using System.Diagnostics;
 
 public class GameController : MonoBehaviour
 {
-    [FMODUnity.EventRef]
-    public string PlayerStateEvent = "";
-    FMOD.Studio.EventInstance playerState;
-
     public GameObject WinScreen;
     public Image radialRoundImage;
     public float roundTime;
@@ -39,9 +35,6 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerState = FMODUnity.RuntimeManager.CreateInstance(PlayerStateEvent);
-        playerState.start();
-
         _roundTimer = new Stopwatch();
         _roundTimer.Start();
     }
