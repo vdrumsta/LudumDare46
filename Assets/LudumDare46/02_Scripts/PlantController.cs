@@ -330,6 +330,7 @@ public class PlantController : MonoBehaviour
 
     public void Swallow(GameObject itemToSwallow, float spitAfterSecond)
     {
+        itemToSwallow.transform.SetParent(null);
         swallowedItems.Add(itemToSwallow);
         itemToSwallow.SetActive(false);
         StartCoroutine(SpitAfterTime(itemToSwallow, spitAfterSecond));
@@ -352,5 +353,11 @@ public class PlantController : MonoBehaviour
 
         var attackableObjScript = swallowedItem.GetComponent<AttackableObject>();
         StartCoroutine(attackableObjScript.ChangeIsAttackableForTime(false, 2));
+
+        var pickableItemScript = swallowedItem.GetComponent<PickableItem>();
+        if (pickableItemScript)
+        {
+            pickableItemScript.itemInUse = false;
+        }
     }
 }
