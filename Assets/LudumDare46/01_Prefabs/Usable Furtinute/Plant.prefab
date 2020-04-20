@@ -208,7 +208,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d010e49b0b6684abca5751e932dbe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 8321528491089809488}
+  stemAnimator: {fileID: 8321528491089809488}
+  headAnimator: {fileID: 640651598611010013}
   statsList:
   - statName: 0
     value: 100
@@ -364,6 +365,7 @@ MonoBehaviour:
   angleOfAttack: 5
   spitPoint: {fileID: 1407675202849908483}
   spitForce: 10
+  deathScreen: {fileID: 0}
 --- !u!114 &8321528491089809517
 MonoBehaviour:
   m_ObjectHideFlags: 0
