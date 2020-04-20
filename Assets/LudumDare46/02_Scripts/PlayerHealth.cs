@@ -15,6 +15,9 @@ public class PlayerHealth : MonoBehaviour, IObserver<PlantController>
 
     public GameObject deathScreen;
 
+    public delegate void PlayerHealthDelegate();
+    public PlayerHealthDelegate onDieDelegate;
+
     private int maxHealth;
 
     // Start is called before the first frame update
@@ -70,6 +73,7 @@ public class PlayerHealth : MonoBehaviour, IObserver<PlantController>
 
     private void Die()
     {
+        onDieDelegate?.Invoke();
         deathScreen.SetActive(true);
         Destroy(gameObject);
     }

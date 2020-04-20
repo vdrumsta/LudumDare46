@@ -8,6 +8,10 @@ public class PlayerArms : MonoBehaviour
     private PlaceableSurface placebaleSurfaceAvailable;
     private SpawnableSurface spawnableSurfaceAvailable;
 
+    public delegate void PlayerArmsDelegate();
+    public PlayerArmsDelegate onPickUpDelegate;
+    public PlayerArmsDelegate onDropDelegate;
+
     private PickableItem itemInHand;
     public PickableItem ItemInHand
     {
@@ -31,6 +35,7 @@ public class PlayerArms : MonoBehaviour
                 itemInHand = itemAvailable;
                 itemAvailable = null;
                 itemInHand.PlaceItemAtLocation(transform);
+                onPickUpDelegate?.Invoke();
             }
             else if (placebaleSurfaceAvailable)
             {
@@ -59,6 +64,7 @@ public class PlayerArms : MonoBehaviour
             {
                 itemInHand.DropItem(null);
                 ItemInHand = null;
+                onDropDelegate?.Invoke();
             }
         }
         else if (Input.GetButtonDown("Fire2"))

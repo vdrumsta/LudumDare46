@@ -47,7 +47,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: bcd19d2957c964445857667d1f300f05,
+  m_Motion: {fileID: -203655887218126122, guid: bd31d439250157b48a103bc36bb5b79a,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -65,13 +65,13 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 7525370571256167432}
-    m_Position: {x: 306, y: 129, z: 0}
+    m_Position: {x: 310, y: 130, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5485966165431189322}
     m_Position: {x: 310, y: 40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3257515083416719534}
-    m_Position: {x: 300, y: 220, z: 0}
+    m_Position: {x: 310, y: 220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2428439040976421931}
     m_Position: {x: 570, y: 130, z: 0}
@@ -167,7 +167,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Pick_up
-  m_Speed: 2.5
+  m_Speed: 4.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 9017701836289489709}
@@ -195,7 +195,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Throw
-  m_Speed: 1
+  m_Speed: 3
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 4700183858427281805}
@@ -208,7 +208,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 788ad92050e298f4ea7583572bda5de3,
+  m_Motion: {fileID: -203655887218126122, guid: 3aed5fb6b160ec942913dd2eebc5a038,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -399,7 +399,10 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: Drop
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3257515083416719534}
   m_Solo: 0

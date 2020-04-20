@@ -10,10 +10,11 @@ public class Player : MonoBehaviour
     private Vector3 velocityVector;
     private PlayerFeet feet;
     private PlayerArms arms;
+    private PlayerHealth health;
     private Animator characterAnimator;
 
     private int isWalking_hash = Animator.StringToHash("IsWalking");
-    private int pickUp_hash = Animator.StringToHash("PickUP");
+    private int pickUp_hash = Animator.StringToHash("PickUp");
     private int drop_hash = Animator.StringToHash("Drop");
     private int die_hash = Animator.StringToHash("Die");
 
@@ -27,7 +28,12 @@ public class Player : MonoBehaviour
         controller = GetComponent<CharacterController>();
         feet = GetComponentInChildren<PlayerFeet>();
         arms = GetComponentInChildren<PlayerArms>();
+        health = GetComponent<PlayerHealth>();
         characterAnimator = GetComponentInChildren<Animator>();
+
+        arms.onPickUpDelegate += AnimationPickUp;
+        arms.onDropDelegate += AnimationDrop;
+        health.onDieDelegate += AnimationDie;
     }
 
     void Update()
@@ -56,5 +62,20 @@ public class Player : MonoBehaviour
         {
             isWalkingAnimation = false;
         }
+    }
+
+    public void AnimationPickUp()
+    {
+        pickUpAnimation = true;
+    }
+
+    public void AnimationDrop()
+    {
+        dropAnimation = true;
+    }
+
+    public void AnimationDie()
+    {
+        dieAnimation = true;
     }
 }
