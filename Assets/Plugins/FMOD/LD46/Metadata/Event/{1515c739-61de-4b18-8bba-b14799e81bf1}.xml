@@ -5,7 +5,7 @@
 			<value>UV lamp</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{80c2829d-2fe5-4f0a-8ab2-47719453fdee}</destination>
@@ -144,6 +144,9 @@
 		<property name="initialValue">
 			<value>-80</value>
 		</property>
+		<property name="attackTime">
+			<value>320</value>
+		</property>
 		<property name="finalValue">
 			<value>-80</value>
 		</property>
@@ -151,7 +154,6 @@
 	<object class="MixerBusEffectChain" id="{6948f391-a99c-4b17-9bb6-65bb767df671}">
 		<relationship name="effects">
 			<destination>{a52deebe-67df-4fe8-bfe0-59ab1e18e420}</destination>
-			<destination>{dc20fc16-8001-4440-aa54-b4bd358cafad}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{9d2c1426-49ab-492a-a8f3-b129861f66f7}" />
@@ -164,7 +166,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{12774d69-9101-4c37-abcb-e27d604cddf3}" />
 	<object class="MixerBusFader" id="{a52deebe-67df-4fe8-bfe0-59ab1e18e420}" />
-	<object class="SpatialiserEffect" id="{dc20fc16-8001-4440-aa54-b4bd358cafad}" />
 	<object class="ThreeEQEffect" id="{29226f48-7666-45b1-bb43-04b760b0b390}">
 		<property name="lowGain">
 			<value>-8</value>
@@ -173,7 +174,7 @@
 			<value>-7.5</value>
 		</property>
 		<property name="highGain">
-			<value>-24.5</value>
+			<value>3</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{783a2910-fb30-4db0-8927-6b0314c93407}" />
