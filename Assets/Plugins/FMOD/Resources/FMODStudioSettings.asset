@@ -15,7 +15,7 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets\Plugins\FMOD\LD46\LD46.fspro
+  sourceProjectPath: Assets/Plugins/FMOD/LD46/LD46.fspro
   sourceBankPath: Assets\Plugins\FMOD\LD46\Build
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
