@@ -2,9 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using FMOD;
+using Debug = UnityEngine.Debug;
 
 public class PlaceableSurface : MonoBehaviour
 {
+    [FMODUnity.EventRef]
+    public string placeDownSound = "";
+    private FMOD.Studio.EventInstance soundEvent;
+
     public Transform positionOfItem;
     public PickableItem itemOnSurface;
     
@@ -22,6 +28,18 @@ public class PlaceableSurface : MonoBehaviour
     public int numberNeeded;
     private int amountOnSurface;
     public TextMeshProUGUI textForConsumeables;
+
+
+    private void Start()
+    {
+        // FMOD
+        if (placeDownSound.Length != 0)
+        {
+            Debug.Log(gameObject.name + " attached sound = " + placeDownSound);
+            
+            //FMODUnity.RuntimeManager.AttachInstanceToGameObject(soundEvent);
+        }
+    }
 
     private void Update()
     {
@@ -51,6 +69,9 @@ public class PlaceableSurface : MonoBehaviour
             if (item.percentageFull != 100 && hasItemOnCoroutine == null)
             {
                 hasItemOnCoroutine = StartCoroutine(HasItemOnRoutine(item));
+                soundEvent = FMODUnity.RuntimeManager.CreateInstance(placeDownSound);
+                soundEvent.start();
+                Debug.Log("Playing put down sound");
             }
             else if (item.percentageFull == 100 && hasItemOnCoroutine != null)
             {
