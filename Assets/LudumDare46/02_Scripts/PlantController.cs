@@ -191,6 +191,9 @@ public class PlantController : MonoBehaviour
 
     private void Die()
     {
+        Debug.Log("plant dead");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Plant/Death");
+
         isDead = true;
         dieAnimation = true;
         if (deathScreen)
