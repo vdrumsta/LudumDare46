@@ -81,12 +81,14 @@ public class PlaceableSurface : MonoBehaviour
             {
                 StopCoroutine(hasItemOnCoroutine);
                 hasItemOnCoroutine = null;
+                soundEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             }
         }
         else if (hasItemOnCoroutine != null)
         {
             StopCoroutine(hasItemOnCoroutine);
             hasItemOnCoroutine = null;
+            soundEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         }
     }
 
