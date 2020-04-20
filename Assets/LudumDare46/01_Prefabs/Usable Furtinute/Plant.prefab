@@ -279,7 +279,7 @@ MonoBehaviour:
       m_NumAlphaKeys: 2
     fill: {fileID: 0}
     sliderValue: 0
-  growScript: {fileID: 0}
+  growScript: {fileID: 422592114}
   eatRadius: 2.25
   rotateScript: {fileID: 8321528491089809517}
   angleOfAttack: 5
@@ -370,6 +370,7 @@ GameObject:
   - component: {fileID: 8321528491739478068}
   - component: {fileID: 7727600}
   - component: {fileID: 7727601}
+  - component: {fileID: 7727597}
   m_Layer: 8
   m_Name: Stem
   m_TagString: Untagged
@@ -454,6 +455,19 @@ CapsuleCollider:
   m_Direction: 1
   m_Center: {x: 0.0000002954912, y: 0.1, z: 0.00000033155084}
 --- !u!114 &7727601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8321528491739478065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2738ef493e438d74cb451a3581dc7e21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  root: {fileID: 8321528491089809516}
+--- !u!114 &7727597
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
