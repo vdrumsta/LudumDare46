@@ -108,6 +108,11 @@ public class PlantController : MonoBehaviour
             isAttacking = value;
             stemAnimator.SetBool("attack", value);
             attackAnimation = value;
+
+            if (value)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Plant/Move");
+            }
         }
     }
 

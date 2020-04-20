@@ -11,6 +11,10 @@ public class PlaceableSurface : MonoBehaviour
     public string placeDownSound = "";
     private FMOD.Studio.EventInstance soundEvent;
 
+    [FMODUnity.EventRef]
+    public string consumeItemSound = "";
+    private FMOD.Studio.EventInstance consumeItemSoundEvent;
+
     public Transform positionOfItem;
     public PickableItem itemOnSurface;
     
@@ -32,7 +36,13 @@ public class PlaceableSurface : MonoBehaviour
 
     private void Start()
     {
-
+        // FMOD
+        if (placeDownSound.Length != 0)
+        {
+            //Debug.Log(gameObject.name + " attached sound = " + placeDownSound);
+            
+            //FMODUnity.RuntimeManager.AttachInstanceToGameObject(soundEvent);
+        }
     }
 
     private void Update()
@@ -47,6 +57,12 @@ public class PlaceableSurface : MonoBehaviour
             }
             else if (consumableItem && consumableItem.canBeUsedFor == typeToConsume)
             {
+                if (placeDownSound.Length != 0)
+                {
+                    consumeItemSoundEvent = FMODUnity.RuntimeManager.CreateInstance(consumeItemSound);
+                    consumeItemSoundEvent.start();
+                }
+
                 Debug.Log("Consume item");
                 Destroy(itemOnSurface.gameObject);
                 itemOnSurface = null;

@@ -2394,25 +2394,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 589466719}
     m_Modifications:
-    - target: {fileID: 3171033012219706154, guid: c79006a71e40f1345b3f51fce9c40809,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5268589802068485855, guid: c79006a71e40f1345b3f51fce9c40809,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8321528491089809516, guid: c79006a71e40f1345b3f51fce9c40809,
         type: 3}
       propertyPath: m_Name
       value: Plant
-      objectReference: {fileID: 0}
-    - target: {fileID: 8321528491089809516, guid: c79006a71e40f1345b3f51fce9c40809,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8321528491089809518, guid: c79006a71e40f1345b3f51fce9c40809,
         type: 3}
@@ -2509,13 +2494,7 @@ PrefabInstance:
       propertyPath: statBars.Array.data[3].fill
       value: 
       objectReference: {fileID: 101495933}
-    - target: {fileID: 9190812601265925816, guid: c79006a71e40f1345b3f51fce9c40809,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7727597, guid: c79006a71e40f1345b3f51fce9c40809, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c79006a71e40f1345b3f51fce9c40809, type: 3}
 --- !u!4 &627420213 stripped
 Transform:
@@ -4231,38 +4210,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1020114030 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5534099699318041663, guid: c039f42a070652d4ca97d98ffc2271da,
-    type: 3}
-  m_PrefabInstance: {fileID: 2353428879445165931}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1020114031 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3338983262724637575, guid: c039f42a070652d4ca97d98ffc2271da,
-    type: 3}
-  m_PrefabInstance: {fileID: 2353428879445165931}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1020114030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e26c30d51a196ce488d4c84a199c45ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1020114032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1020114030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 533f90d2f35b3114bb6509b91d4c111f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spitAfterSecond: 2
-  attackableScript: {fileID: 1020114031}
 --- !u!1001 &1020997181
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5168,6 +5115,11 @@ PrefabInstance:
         type: 3}
       propertyPath: placeDownSound
       value: event:/Actions/Cooking
+      objectReference: {fileID: 0}
+    - target: {fileID: 1941648110114704682, guid: 0ac280496aa83eb42a5d7e4bc54dcbcd,
+        type: 3}
+      propertyPath: consumeItemSound
+      value: event:/Actions/PlaceFood
       objectReference: {fileID: 0}
     - target: {fileID: 1941648110114704683, guid: 0ac280496aa83eb42a5d7e4bc54dcbcd,
         type: 3}
@@ -8289,6 +8241,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 715430898}
     m_Modifications:
+    - target: {fileID: 1956771267351986718, guid: 8e36f0587a794844f8fd55a95e1d9e1a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974238374471517203, guid: 8e36f0587a794844f8fd55a95e1d9e1a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5819373874032842589, guid: 8e36f0587a794844f8fd55a95e1d9e1a,
         type: 3}
       propertyPath: m_Name
@@ -10067,11 +10029,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2854022813525587606, guid: 6838534834fbf984299c63472c7db021,
-        type: 3}
-      propertyPath: turnOnSound
-      value: event:/Objects/Water can emplty
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6838534834fbf984299c63472c7db021, type: 3}
 --- !u!4 &4088508699594887280 stripped
@@ -10141,11 +10098,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5762551566780433636, guid: 5d0221918f4087f488c7a0dbd30c7cbb,
-        type: 3}
-      propertyPath: turnOnSound
-      value: event:/Objects/BoomBox IN ST
       objectReference: {fileID: 0}
     - target: {fileID: 5762551566780433638, guid: 5d0221918f4087f488c7a0dbd30c7cbb,
         type: 3}
