@@ -2394,10 +2394,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 589466719}
     m_Modifications:
+    - target: {fileID: 3171033012219706154, guid: c79006a71e40f1345b3f51fce9c40809,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5268589802068485855, guid: c79006a71e40f1345b3f51fce9c40809,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8321528491089809516, guid: c79006a71e40f1345b3f51fce9c40809,
         type: 3}
       propertyPath: m_Name
       value: Plant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8321528491089809516, guid: c79006a71e40f1345b3f51fce9c40809,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8321528491089809518, guid: c79006a71e40f1345b3f51fce9c40809,
         type: 3}
@@ -2494,7 +2509,13 @@ PrefabInstance:
       propertyPath: statBars.Array.data[3].fill
       value: 
       objectReference: {fileID: 101495933}
-    m_RemovedComponents: []
+    - target: {fileID: 9190812601265925816, guid: c79006a71e40f1345b3f51fce9c40809,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7727597, guid: c79006a71e40f1345b3f51fce9c40809, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c79006a71e40f1345b3f51fce9c40809, type: 3}
 --- !u!4 &627420213 stripped
 Transform:
