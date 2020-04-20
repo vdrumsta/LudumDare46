@@ -75,7 +75,6 @@ public class PlayerHealth : MonoBehaviour, IObserver<PlantController>
     {
         onDieDelegate?.Invoke();
         deathScreen.SetActive(true);
-        Destroy(gameObject);
     }
 
     IEnumerator RemoveImmunityAfterTime(float seconds)

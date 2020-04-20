@@ -24,7 +24,7 @@ public class StatTypeClass
     // the plants wants to eat items of this stat type
     public float maxValueSatisfaction = 50f;
 
-    public StatTypeClass(StatType statName, float value, 
+    public StatTypeClass(StatType statName = StatType.Happiness, float value = 0f, 
         float reducePerSecond = 0f, float maxValueSatisfaction = 50f)
     {
         this.statName = statName;
@@ -62,7 +62,21 @@ public class StatSliderClass
 
 public class PlantController : MonoBehaviour
 {
-    public Animator animator;
+    public Animator stemAnimator;
+    public Animator headAnimator;
+
+    #region Head Animations
+    private int isHappy_hash = Animator.StringToHash("IsHappy");
+    private int attack_hash = Animator.StringToHash("Attack");
+    private int eat_hash = Animator.StringToHash("Eat");
+    private int die_hash = Animator.StringToHash("Die");
+
+    public bool isHappyAnimation { get { return headAnimator.GetBool(isHappy_hash); } set { headAnimator.SetBool(isHappy_hash, value); } }
+    public bool attackAnimation { get { return headAnimator.GetBool(attack_hash); } set { headAnimator.SetBool(attack_hash, value); } }
+    public bool eatAnimation { get { return headAnimator.GetBool(eat_hash); } set { headAnimator.SetBool(eat_hash, value); } }
+    public bool dieAnimation { get { return headAnimator.GetBool(die_hash); } set { headAnimator.SetBool(die_hash, value); } }
+
+    #endregion
 
     // Change stats dictionary if you wanna change the stat, not the list
     public List<StatTypeClass> statsList = new List<StatTypeClass>();
@@ -75,6 +89,8 @@ public class PlantController : MonoBehaviour
     private List<GameObject> swallowedItems = new List<GameObject>();
     public Transform spitPoint;
     public float spitForce = 1f;
+    private bool isDead;
+    public GameObject deathScreen;
 
     private bool isAttacking;
     public bool IsAttacking
@@ -87,7 +103,8 @@ public class PlantController : MonoBehaviour
         private set
         {
             isAttacking = value;
-            animator.SetBool("attack", value);
+            stemAnimator.SetBool("attack", value);
+            attackAnimation = value;
         }
     }
 
@@ -104,38 +121,62 @@ public class PlantController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ReduceStats();
-
-        var newTarget = PickNewTarget();
-
-        FindAndAttackTarget(newTarget);
-
-        UpdateStatsBars();
-
-        // For debugging to see the stat values in editor
-        UpdateStatsList();
-
-        // For debugging
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (!isDead)
         {
-            stats[StatType.Hunger] -= 20;
+            ReduceStats();
+
+            var newTarget = PickNewTarget();
+
+            FindAndAttackTarget(newTarget);
+
+            UpdateStatsBars();
+
+            isHappyAnimation = IsStatSatisfied(StatType.Happiness);
+
+            // For debugging to see the stat values in editor
+            UpdateStatsList();
+
+            // For debugging
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                stats[StatType.Hunger] -= 20;
+            }
         }
     }
 
     public void AddStat(StatType statType, float amount)
     {
-        stats[statType] += amount;
+        if(!isDead)
+        {
+            stats[statType] += amount;
+        }
     }
 
     private void ReduceStats()
     {
-        foreach(var stat in statsList)
+        if (!isDead)
         {
-            stats[stat.statName] -= stat.reducePerSecond * Time.deltaTime;
-            stats[stat.statName] = Mathf.Clamp(stats[stat.statName], 0, 100);
+            foreach (var stat in statsList)
+            {
+                stats[stat.statName] -= stat.reducePerSecond * Time.deltaTime;
+                stats[stat.statName] = Mathf.Clamp(stats[stat.statName], 0, 100);
+                if (stats[stat.statName] <= 0)
+                {
+                    Die();
+                    break;
+                }
+            }
         }
+    }
 
-        
+    private void Die()
+    {
+        isDead = true;
+        dieAnimation = true;
+        if (deathScreen)
+        {
+            deathScreen.SetActive(true);
+        }
     }
 
     private void UpdateStatsBars()
@@ -211,6 +252,20 @@ public class PlantController : MonoBehaviour
     public float GetStat(StatType statType)
     {
         return stats[statType];
+    }
+
+    public bool IsStatSatisfied(StatType statType)
+    {
+        StatTypeClass stat = new StatTypeClass();
+        foreach(StatTypeClass statTypeClass in statsList)
+        {
+            if(statTypeClass.statName == statType)
+            {
+                stat = statTypeClass;
+                break;
+            }
+        }
+        return GetStat(StatType.Happiness) > stat.maxValueSatisfaction;
     }
 
     private AttackableObject PickNewTarget()
